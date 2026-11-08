@@ -1,0 +1,1438 @@
+[
+  {
+    "level": "Composite_D1_R1",
+    "seed": 42,
+    "targets": {
+      "original_fire": [
+        23,
+        51
+      ],
+      "new_fire": [
+        80,
+        80
+      ],
+      "water": [
+        19,
+        28
+      ],
+      "civilian_cluster": [
+        51,
+        12
+      ]
+    },
+    "initial_workers": [
+      {
+        "agent_id": 1,
+        "agent_type": 0,
+        "position": [
+          62.0,
+          20.0
+        ]
+      },
+      {
+        "agent_id": 2,
+        "agent_type": 0,
+        "position": [
+          62.0,
+          20.0
+        ]
+      },
+      {
+        "agent_id": 3,
+        "agent_type": 0,
+        "position": [
+          62.0,
+          20.0
+        ]
+      },
+      {
+        "agent_id": 4,
+        "agent_type": 0,
+        "position": [
+          62.0,
+          20.0
+        ]
+      },
+      {
+        "agent_id": 5,
+        "agent_type": 0,
+        "position": [
+          62.0,
+          20.0
+        ]
+      },
+      {
+        "agent_id": 6,
+        "agent_type": 0,
+        "position": [
+          62.0,
+          20.0
+        ]
+      },
+      {
+        "agent_id": 7,
+        "agent_type": 0,
+        "position": [
+          62.0,
+          20.0
+        ]
+      },
+      {
+        "agent_id": 8,
+        "agent_type": 0,
+        "position": [
+          62.0,
+          20.0
+        ]
+      },
+      {
+        "agent_id": 9,
+        "agent_type": 1,
+        "position": [
+          62.0,
+          20.0
+        ]
+      },
+      {
+        "agent_id": 10,
+        "agent_type": 2,
+        "position": [
+          62.0,
+          20.0
+        ]
+      },
+      {
+        "agent_id": 11,
+        "agent_type": 3,
+        "position": [
+          62.0,
+          20.0
+        ]
+      }
+    ],
+    "nearest_travel": {
+      "firefighter": {
+        "original_fire": {
+          "nearest_worker": 1,
+          "distance_cells": 49.82,
+          "straight_line_steps_to_coordinate": 5
+        },
+        "new_fire": {
+          "nearest_worker": 1,
+          "distance_cells": 62.64,
+          "straight_line_steps_to_coordinate": 6
+        },
+        "water": {
+          "nearest_worker": 1,
+          "distance_cells": 43.74,
+          "straight_line_steps_to_coordinate": 4
+        },
+        "civilian_cluster": {
+          "nearest_worker": 1,
+          "distance_cells": 13.6,
+          "straight_line_steps_to_coordinate": 2
+        }
+      },
+      "bulldozer": {
+        "original_fire": {
+          "nearest_worker": 9,
+          "distance_cells": 49.82,
+          "straight_line_steps_to_coordinate": 7
+        },
+        "new_fire": {
+          "nearest_worker": 9,
+          "distance_cells": 62.64,
+          "straight_line_steps_to_coordinate": 8
+        },
+        "water": {
+          "nearest_worker": 9,
+          "distance_cells": 43.74,
+          "straight_line_steps_to_coordinate": 6
+        },
+        "civilian_cluster": {
+          "nearest_worker": 9,
+          "distance_cells": 13.6,
+          "straight_line_steps_to_coordinate": 2
+        }
+      },
+      "drone": {
+        "original_fire": {
+          "nearest_worker": 10,
+          "distance_cells": 49.82,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "new_fire": {
+          "nearest_worker": 10,
+          "distance_cells": 62.64,
+          "straight_line_steps_to_coordinate": 4
+        },
+        "water": {
+          "nearest_worker": 10,
+          "distance_cells": 43.74,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "civilian_cluster": {
+          "nearest_worker": 10,
+          "distance_cells": 13.6,
+          "straight_line_steps_to_coordinate": 1
+        }
+      },
+      "helicopter": {
+        "original_fire": {
+          "nearest_worker": 11,
+          "distance_cells": 49.82,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "new_fire": {
+          "nearest_worker": 11,
+          "distance_cells": 62.64,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "water": {
+          "nearest_worker": 11,
+          "distance_cells": 43.74,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "civilian_cluster": {
+          "nearest_worker": 11,
+          "distance_cells": 13.6,
+          "straight_line_steps_to_coordinate": 1
+        }
+      }
+    },
+    "assumption": "source nominal 2 simulated seconds per high-level step; straight-line empty-terrain travel to exact target coordinate",
+    "inference_limit": "coordinate travel is not a task deadline bound: scouts may observe from a distance; release-time positions, loading, cutting, suppression and deployed step timing need trajectory verification"
+  },
+  {
+    "level": "Composite_D1_R1",
+    "seed": 256,
+    "targets": {
+      "original_fire": [
+        63,
+        28
+      ],
+      "new_fire": [
+        80,
+        80
+      ],
+      "water": [
+        74,
+        29
+      ],
+      "civilian_cluster": [
+        23,
+        82
+      ]
+    },
+    "initial_workers": [
+      {
+        "agent_id": 1,
+        "agent_type": 0,
+        "position": [
+          46.0,
+          83.0
+        ]
+      },
+      {
+        "agent_id": 2,
+        "agent_type": 0,
+        "position": [
+          46.0,
+          83.0
+        ]
+      },
+      {
+        "agent_id": 3,
+        "agent_type": 0,
+        "position": [
+          46.0,
+          83.0
+        ]
+      },
+      {
+        "agent_id": 4,
+        "agent_type": 0,
+        "position": [
+          46.0,
+          83.0
+        ]
+      },
+      {
+        "agent_id": 5,
+        "agent_type": 0,
+        "position": [
+          46.0,
+          83.0
+        ]
+      },
+      {
+        "agent_id": 6,
+        "agent_type": 0,
+        "position": [
+          46.0,
+          83.0
+        ]
+      },
+      {
+        "agent_id": 7,
+        "agent_type": 0,
+        "position": [
+          46.0,
+          83.0
+        ]
+      },
+      {
+        "agent_id": 8,
+        "agent_type": 0,
+        "position": [
+          46.0,
+          83.0
+        ]
+      },
+      {
+        "agent_id": 9,
+        "agent_type": 1,
+        "position": [
+          46.0,
+          83.0
+        ]
+      },
+      {
+        "agent_id": 10,
+        "agent_type": 2,
+        "position": [
+          46.0,
+          83.0
+        ]
+      },
+      {
+        "agent_id": 11,
+        "agent_type": 3,
+        "position": [
+          46.0,
+          83.0
+        ]
+      }
+    ],
+    "nearest_travel": {
+      "firefighter": {
+        "original_fire": {
+          "nearest_worker": 1,
+          "distance_cells": 57.57,
+          "straight_line_steps_to_coordinate": 5
+        },
+        "new_fire": {
+          "nearest_worker": 1,
+          "distance_cells": 34.13,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "water": {
+          "nearest_worker": 1,
+          "distance_cells": 60.83,
+          "straight_line_steps_to_coordinate": 6
+        },
+        "civilian_cluster": {
+          "nearest_worker": 1,
+          "distance_cells": 23.02,
+          "straight_line_steps_to_coordinate": 2
+        }
+      },
+      "bulldozer": {
+        "original_fire": {
+          "nearest_worker": 9,
+          "distance_cells": 57.57,
+          "straight_line_steps_to_coordinate": 8
+        },
+        "new_fire": {
+          "nearest_worker": 9,
+          "distance_cells": 34.13,
+          "straight_line_steps_to_coordinate": 5
+        },
+        "water": {
+          "nearest_worker": 9,
+          "distance_cells": 60.83,
+          "straight_line_steps_to_coordinate": 8
+        },
+        "civilian_cluster": {
+          "nearest_worker": 9,
+          "distance_cells": 23.02,
+          "straight_line_steps_to_coordinate": 3
+        }
+      },
+      "drone": {
+        "original_fire": {
+          "nearest_worker": 10,
+          "distance_cells": 57.57,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "new_fire": {
+          "nearest_worker": 10,
+          "distance_cells": 34.13,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "water": {
+          "nearest_worker": 10,
+          "distance_cells": 60.83,
+          "straight_line_steps_to_coordinate": 4
+        },
+        "civilian_cluster": {
+          "nearest_worker": 10,
+          "distance_cells": 23.02,
+          "straight_line_steps_to_coordinate": 2
+        }
+      },
+      "helicopter": {
+        "original_fire": {
+          "nearest_worker": 11,
+          "distance_cells": 57.57,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "new_fire": {
+          "nearest_worker": 11,
+          "distance_cells": 34.13,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "water": {
+          "nearest_worker": 11,
+          "distance_cells": 60.83,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "civilian_cluster": {
+          "nearest_worker": 11,
+          "distance_cells": 23.02,
+          "straight_line_steps_to_coordinate": 1
+        }
+      }
+    },
+    "assumption": "source nominal 2 simulated seconds per high-level step; straight-line empty-terrain travel to exact target coordinate",
+    "inference_limit": "coordinate travel is not a task deadline bound: scouts may observe from a distance; release-time positions, loading, cutting, suppression and deployed step timing need trajectory verification"
+  },
+  {
+    "level": "Composite_D1_R1",
+    "seed": 503,
+    "targets": {
+      "original_fire": [
+        39,
+        78
+      ],
+      "new_fire": [
+        80,
+        80
+      ],
+      "water": [
+        31,
+        16
+      ],
+      "civilian_cluster": [
+        79,
+        23
+      ]
+    },
+    "initial_workers": [
+      {
+        "agent_id": 1,
+        "agent_type": 0,
+        "position": [
+          49.0,
+          41.0
+        ]
+      },
+      {
+        "agent_id": 2,
+        "agent_type": 0,
+        "position": [
+          49.0,
+          41.0
+        ]
+      },
+      {
+        "agent_id": 3,
+        "agent_type": 0,
+        "position": [
+          49.0,
+          41.0
+        ]
+      },
+      {
+        "agent_id": 4,
+        "agent_type": 0,
+        "position": [
+          49.0,
+          41.0
+        ]
+      },
+      {
+        "agent_id": 5,
+        "agent_type": 0,
+        "position": [
+          49.0,
+          41.0
+        ]
+      },
+      {
+        "agent_id": 6,
+        "agent_type": 0,
+        "position": [
+          49.0,
+          41.0
+        ]
+      },
+      {
+        "agent_id": 7,
+        "agent_type": 0,
+        "position": [
+          49.0,
+          41.0
+        ]
+      },
+      {
+        "agent_id": 8,
+        "agent_type": 0,
+        "position": [
+          49.0,
+          41.0
+        ]
+      },
+      {
+        "agent_id": 9,
+        "agent_type": 1,
+        "position": [
+          49.0,
+          41.0
+        ]
+      },
+      {
+        "agent_id": 10,
+        "agent_type": 2,
+        "position": [
+          49.0,
+          41.0
+        ]
+      },
+      {
+        "agent_id": 11,
+        "agent_type": 3,
+        "position": [
+          49.0,
+          41.0
+        ]
+      }
+    ],
+    "nearest_travel": {
+      "firefighter": {
+        "original_fire": {
+          "nearest_worker": 1,
+          "distance_cells": 38.33,
+          "straight_line_steps_to_coordinate": 4
+        },
+        "new_fire": {
+          "nearest_worker": 1,
+          "distance_cells": 49.82,
+          "straight_line_steps_to_coordinate": 5
+        },
+        "water": {
+          "nearest_worker": 1,
+          "distance_cells": 30.81,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "civilian_cluster": {
+          "nearest_worker": 1,
+          "distance_cells": 34.99,
+          "straight_line_steps_to_coordinate": 3
+        }
+      },
+      "bulldozer": {
+        "original_fire": {
+          "nearest_worker": 9,
+          "distance_cells": 38.33,
+          "straight_line_steps_to_coordinate": 5
+        },
+        "new_fire": {
+          "nearest_worker": 9,
+          "distance_cells": 49.82,
+          "straight_line_steps_to_coordinate": 7
+        },
+        "water": {
+          "nearest_worker": 9,
+          "distance_cells": 30.81,
+          "straight_line_steps_to_coordinate": 4
+        },
+        "civilian_cluster": {
+          "nearest_worker": 9,
+          "distance_cells": 34.99,
+          "straight_line_steps_to_coordinate": 5
+        }
+      },
+      "drone": {
+        "original_fire": {
+          "nearest_worker": 10,
+          "distance_cells": 38.33,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "new_fire": {
+          "nearest_worker": 10,
+          "distance_cells": 49.82,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "water": {
+          "nearest_worker": 10,
+          "distance_cells": 30.81,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "civilian_cluster": {
+          "nearest_worker": 10,
+          "distance_cells": 34.99,
+          "straight_line_steps_to_coordinate": 2
+        }
+      },
+      "helicopter": {
+        "original_fire": {
+          "nearest_worker": 11,
+          "distance_cells": 38.33,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "new_fire": {
+          "nearest_worker": 11,
+          "distance_cells": 49.82,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "water": {
+          "nearest_worker": 11,
+          "distance_cells": 30.81,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "civilian_cluster": {
+          "nearest_worker": 11,
+          "distance_cells": 34.99,
+          "straight_line_steps_to_coordinate": 2
+        }
+      }
+    },
+    "assumption": "source nominal 2 simulated seconds per high-level step; straight-line empty-terrain travel to exact target coordinate",
+    "inference_limit": "coordinate travel is not a task deadline bound: scouts may observe from a distance; release-time positions, loading, cutting, suppression and deployed step timing need trajectory verification"
+  },
+  {
+    "level": "Composite_D1_R0",
+    "seed": 314,
+    "targets": {
+      "original_fire": [
+        32,
+        54
+      ],
+      "new_fire": [
+        80,
+        80
+      ],
+      "water": [
+        91,
+        90
+      ],
+      "civilian_cluster": [
+        75,
+        14
+      ]
+    },
+    "initial_workers": [
+      {
+        "agent_id": 1,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 2,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 3,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 4,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 5,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 6,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 7,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 8,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 9,
+        "agent_type": 1,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 10,
+        "agent_type": 2,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 11,
+        "agent_type": 2,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 12,
+        "agent_type": 3,
+        "position": [
+          70.0,
+          85.0
+        ]
+      }
+    ],
+    "nearest_travel": {
+      "firefighter": {
+        "original_fire": {
+          "nearest_worker": 1,
+          "distance_cells": 49.04,
+          "straight_line_steps_to_coordinate": 5
+        },
+        "new_fire": {
+          "nearest_worker": 1,
+          "distance_cells": 11.18,
+          "straight_line_steps_to_coordinate": 1
+        },
+        "water": {
+          "nearest_worker": 1,
+          "distance_cells": 21.59,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "civilian_cluster": {
+          "nearest_worker": 1,
+          "distance_cells": 71.18,
+          "straight_line_steps_to_coordinate": 6
+        }
+      },
+      "bulldozer": {
+        "original_fire": {
+          "nearest_worker": 9,
+          "distance_cells": 49.04,
+          "straight_line_steps_to_coordinate": 7
+        },
+        "new_fire": {
+          "nearest_worker": 9,
+          "distance_cells": 11.18,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "water": {
+          "nearest_worker": 9,
+          "distance_cells": 21.59,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "civilian_cluster": {
+          "nearest_worker": 9,
+          "distance_cells": 71.18,
+          "straight_line_steps_to_coordinate": 9
+        }
+      },
+      "drone": {
+        "original_fire": {
+          "nearest_worker": 10,
+          "distance_cells": 49.04,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "new_fire": {
+          "nearest_worker": 10,
+          "distance_cells": 11.18,
+          "straight_line_steps_to_coordinate": 1
+        },
+        "water": {
+          "nearest_worker": 10,
+          "distance_cells": 21.59,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "civilian_cluster": {
+          "nearest_worker": 10,
+          "distance_cells": 71.18,
+          "straight_line_steps_to_coordinate": 4
+        }
+      },
+      "helicopter": {
+        "original_fire": {
+          "nearest_worker": 12,
+          "distance_cells": 49.04,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "new_fire": {
+          "nearest_worker": 12,
+          "distance_cells": 11.18,
+          "straight_line_steps_to_coordinate": 1
+        },
+        "water": {
+          "nearest_worker": 12,
+          "distance_cells": 21.59,
+          "straight_line_steps_to_coordinate": 1
+        },
+        "civilian_cluster": {
+          "nearest_worker": 12,
+          "distance_cells": 71.18,
+          "straight_line_steps_to_coordinate": 3
+        }
+      }
+    },
+    "assumption": "source nominal 2 simulated seconds per high-level step; straight-line empty-terrain travel to exact target coordinate",
+    "inference_limit": "coordinate travel is not a task deadline bound: scouts may observe from a distance; release-time positions, loading, cutting, suppression and deployed step timing need trajectory verification"
+  },
+  {
+    "level": "Composite_D1_R1",
+    "seed": 314,
+    "targets": {
+      "original_fire": [
+        32,
+        54
+      ],
+      "new_fire": [
+        80,
+        80
+      ],
+      "water": [
+        91,
+        90
+      ],
+      "civilian_cluster": [
+        75,
+        14
+      ]
+    },
+    "initial_workers": [
+      {
+        "agent_id": 1,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 2,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 3,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 4,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 5,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 6,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 7,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 8,
+        "agent_type": 0,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 9,
+        "agent_type": 1,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 10,
+        "agent_type": 2,
+        "position": [
+          70.0,
+          85.0
+        ]
+      },
+      {
+        "agent_id": 11,
+        "agent_type": 3,
+        "position": [
+          70.0,
+          85.0
+        ]
+      }
+    ],
+    "nearest_travel": {
+      "firefighter": {
+        "original_fire": {
+          "nearest_worker": 1,
+          "distance_cells": 49.04,
+          "straight_line_steps_to_coordinate": 5
+        },
+        "new_fire": {
+          "nearest_worker": 1,
+          "distance_cells": 11.18,
+          "straight_line_steps_to_coordinate": 1
+        },
+        "water": {
+          "nearest_worker": 1,
+          "distance_cells": 21.59,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "civilian_cluster": {
+          "nearest_worker": 1,
+          "distance_cells": 71.18,
+          "straight_line_steps_to_coordinate": 6
+        }
+      },
+      "bulldozer": {
+        "original_fire": {
+          "nearest_worker": 9,
+          "distance_cells": 49.04,
+          "straight_line_steps_to_coordinate": 7
+        },
+        "new_fire": {
+          "nearest_worker": 9,
+          "distance_cells": 11.18,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "water": {
+          "nearest_worker": 9,
+          "distance_cells": 21.59,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "civilian_cluster": {
+          "nearest_worker": 9,
+          "distance_cells": 71.18,
+          "straight_line_steps_to_coordinate": 9
+        }
+      },
+      "drone": {
+        "original_fire": {
+          "nearest_worker": 10,
+          "distance_cells": 49.04,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "new_fire": {
+          "nearest_worker": 10,
+          "distance_cells": 11.18,
+          "straight_line_steps_to_coordinate": 1
+        },
+        "water": {
+          "nearest_worker": 10,
+          "distance_cells": 21.59,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "civilian_cluster": {
+          "nearest_worker": 10,
+          "distance_cells": 71.18,
+          "straight_line_steps_to_coordinate": 4
+        }
+      },
+      "helicopter": {
+        "original_fire": {
+          "nearest_worker": 11,
+          "distance_cells": 49.04,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "new_fire": {
+          "nearest_worker": 11,
+          "distance_cells": 11.18,
+          "straight_line_steps_to_coordinate": 1
+        },
+        "water": {
+          "nearest_worker": 11,
+          "distance_cells": 21.59,
+          "straight_line_steps_to_coordinate": 1
+        },
+        "civilian_cluster": {
+          "nearest_worker": 11,
+          "distance_cells": 71.18,
+          "straight_line_steps_to_coordinate": 3
+        }
+      }
+    },
+    "assumption": "source nominal 2 simulated seconds per high-level step; straight-line empty-terrain travel to exact target coordinate",
+    "inference_limit": "coordinate travel is not a task deadline bound: scouts may observe from a distance; release-time positions, loading, cutting, suppression and deployed step timing need trajectory verification"
+  },
+  {
+    "level": "Composite_D1_R1",
+    "seed": 2027,
+    "targets": {
+      "original_fire": [
+        57,
+        29
+      ],
+      "new_fire": [
+        80,
+        80
+      ],
+      "water": [
+        37,
+        89
+      ],
+      "civilian_cluster": [
+        84,
+        68
+      ]
+    },
+    "initial_workers": [
+      {
+        "agent_id": 1,
+        "agent_type": 0,
+        "position": [
+          63.0,
+          55.0
+        ]
+      },
+      {
+        "agent_id": 2,
+        "agent_type": 0,
+        "position": [
+          63.0,
+          55.0
+        ]
+      },
+      {
+        "agent_id": 3,
+        "agent_type": 0,
+        "position": [
+          63.0,
+          55.0
+        ]
+      },
+      {
+        "agent_id": 4,
+        "agent_type": 0,
+        "position": [
+          63.0,
+          55.0
+        ]
+      },
+      {
+        "agent_id": 5,
+        "agent_type": 0,
+        "position": [
+          63.0,
+          55.0
+        ]
+      },
+      {
+        "agent_id": 6,
+        "agent_type": 0,
+        "position": [
+          63.0,
+          55.0
+        ]
+      },
+      {
+        "agent_id": 7,
+        "agent_type": 0,
+        "position": [
+          63.0,
+          55.0
+        ]
+      },
+      {
+        "agent_id": 8,
+        "agent_type": 0,
+        "position": [
+          63.0,
+          55.0
+        ]
+      },
+      {
+        "agent_id": 9,
+        "agent_type": 1,
+        "position": [
+          63.0,
+          55.0
+        ]
+      },
+      {
+        "agent_id": 10,
+        "agent_type": 2,
+        "position": [
+          63.0,
+          55.0
+        ]
+      },
+      {
+        "agent_id": 11,
+        "agent_type": 3,
+        "position": [
+          63.0,
+          55.0
+        ]
+      }
+    ],
+    "nearest_travel": {
+      "firefighter": {
+        "original_fire": {
+          "nearest_worker": 1,
+          "distance_cells": 26.68,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "new_fire": {
+          "nearest_worker": 1,
+          "distance_cells": 30.23,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "water": {
+          "nearest_worker": 1,
+          "distance_cells": 42.8,
+          "straight_line_steps_to_coordinate": 4
+        },
+        "civilian_cluster": {
+          "nearest_worker": 1,
+          "distance_cells": 24.7,
+          "straight_line_steps_to_coordinate": 3
+        }
+      },
+      "bulldozer": {
+        "original_fire": {
+          "nearest_worker": 9,
+          "distance_cells": 26.68,
+          "straight_line_steps_to_coordinate": 4
+        },
+        "new_fire": {
+          "nearest_worker": 9,
+          "distance_cells": 30.23,
+          "straight_line_steps_to_coordinate": 4
+        },
+        "water": {
+          "nearest_worker": 9,
+          "distance_cells": 42.8,
+          "straight_line_steps_to_coordinate": 6
+        },
+        "civilian_cluster": {
+          "nearest_worker": 9,
+          "distance_cells": 24.7,
+          "straight_line_steps_to_coordinate": 4
+        }
+      },
+      "drone": {
+        "original_fire": {
+          "nearest_worker": 10,
+          "distance_cells": 26.68,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "new_fire": {
+          "nearest_worker": 10,
+          "distance_cells": 30.23,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "water": {
+          "nearest_worker": 10,
+          "distance_cells": 42.8,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "civilian_cluster": {
+          "nearest_worker": 10,
+          "distance_cells": 24.7,
+          "straight_line_steps_to_coordinate": 2
+        }
+      },
+      "helicopter": {
+        "original_fire": {
+          "nearest_worker": 11,
+          "distance_cells": 26.68,
+          "straight_line_steps_to_coordinate": 1
+        },
+        "new_fire": {
+          "nearest_worker": 11,
+          "distance_cells": 30.23,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "water": {
+          "nearest_worker": 11,
+          "distance_cells": 42.8,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "civilian_cluster": {
+          "nearest_worker": 11,
+          "distance_cells": 24.7,
+          "straight_line_steps_to_coordinate": 1
+        }
+      }
+    },
+    "assumption": "source nominal 2 simulated seconds per high-level step; straight-line empty-terrain travel to exact target coordinate",
+    "inference_limit": "coordinate travel is not a task deadline bound: scouts may observe from a distance; release-time positions, loading, cutting, suppression and deployed step timing need trajectory verification"
+  },
+  {
+    "level": "Composite_D1_R1",
+    "seed": 6001,
+    "targets": {
+      "original_fire": [
+        42,
+        44
+      ],
+      "new_fire": [
+        80,
+        80
+      ],
+      "water": [
+        55,
+        77
+      ],
+      "civilian_cluster": [
+        15,
+        76
+      ]
+    },
+    "initial_workers": [
+      {
+        "agent_id": 1,
+        "agent_type": 0,
+        "position": [
+          73.0,
+          58.0
+        ]
+      },
+      {
+        "agent_id": 2,
+        "agent_type": 0,
+        "position": [
+          73.0,
+          58.0
+        ]
+      },
+      {
+        "agent_id": 3,
+        "agent_type": 0,
+        "position": [
+          73.0,
+          58.0
+        ]
+      },
+      {
+        "agent_id": 4,
+        "agent_type": 0,
+        "position": [
+          73.0,
+          58.0
+        ]
+      },
+      {
+        "agent_id": 5,
+        "agent_type": 0,
+        "position": [
+          73.0,
+          58.0
+        ]
+      },
+      {
+        "agent_id": 6,
+        "agent_type": 0,
+        "position": [
+          73.0,
+          58.0
+        ]
+      },
+      {
+        "agent_id": 7,
+        "agent_type": 0,
+        "position": [
+          73.0,
+          58.0
+        ]
+      },
+      {
+        "agent_id": 8,
+        "agent_type": 0,
+        "position": [
+          73.0,
+          58.0
+        ]
+      },
+      {
+        "agent_id": 9,
+        "agent_type": 1,
+        "position": [
+          73.0,
+          58.0
+        ]
+      },
+      {
+        "agent_id": 10,
+        "agent_type": 2,
+        "position": [
+          73.0,
+          58.0
+        ]
+      },
+      {
+        "agent_id": 11,
+        "agent_type": 3,
+        "position": [
+          73.0,
+          58.0
+        ]
+      }
+    ],
+    "nearest_travel": {
+      "firefighter": {
+        "original_fire": {
+          "nearest_worker": 1,
+          "distance_cells": 34.01,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "new_fire": {
+          "nearest_worker": 1,
+          "distance_cells": 23.09,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "water": {
+          "nearest_worker": 1,
+          "distance_cells": 26.17,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "civilian_cluster": {
+          "nearest_worker": 1,
+          "distance_cells": 60.73,
+          "straight_line_steps_to_coordinate": 6
+        }
+      },
+      "bulldozer": {
+        "original_fire": {
+          "nearest_worker": 9,
+          "distance_cells": 34.01,
+          "straight_line_steps_to_coordinate": 5
+        },
+        "new_fire": {
+          "nearest_worker": 9,
+          "distance_cells": 23.09,
+          "straight_line_steps_to_coordinate": 3
+        },
+        "water": {
+          "nearest_worker": 9,
+          "distance_cells": 26.17,
+          "straight_line_steps_to_coordinate": 4
+        },
+        "civilian_cluster": {
+          "nearest_worker": 9,
+          "distance_cells": 60.73,
+          "straight_line_steps_to_coordinate": 8
+        }
+      },
+      "drone": {
+        "original_fire": {
+          "nearest_worker": 10,
+          "distance_cells": 34.01,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "new_fire": {
+          "nearest_worker": 10,
+          "distance_cells": 23.09,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "water": {
+          "nearest_worker": 10,
+          "distance_cells": 26.17,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "civilian_cluster": {
+          "nearest_worker": 10,
+          "distance_cells": 60.73,
+          "straight_line_steps_to_coordinate": 4
+        }
+      },
+      "helicopter": {
+        "original_fire": {
+          "nearest_worker": 11,
+          "distance_cells": 34.01,
+          "straight_line_steps_to_coordinate": 2
+        },
+        "new_fire": {
+          "nearest_worker": 11,
+          "distance_cells": 23.09,
+          "straight_line_steps_to_coordinate": 1
+        },
+        "water": {
+          "nearest_worker": 11,
+          "distance_cells": 26.17,
+          "straight_line_steps_to_coordinate": 1
+        },
+        "civilian_cluster": {
+          "nearest_worker": 11,
+          "distance_cells": 60.73,
+          "straight_line_steps_to_coordinate": 3
+        }
+      }
+    },
+    "assumption": "source nominal 2 simulated seconds per high-level step; straight-line empty-terrain travel to exact target coordinate",
+    "inference_limit": "coordinate travel is not a task deadline bound: scouts may observe from a distance; release-time positions, loading, cutting, suppression and deployed step timing need trajectory verification"
+  }
+]

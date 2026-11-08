@@ -1,0 +1,232 @@
+[
+  {
+    "seed": 42,
+    "level": "Composite_D0_R1",
+    "rows": [
+      {
+        "agent_id": 1,
+        "type": "firefighter",
+        "start": [
+          62.0,
+          20.0
+        ],
+        "target": [
+          80,
+          80
+        ],
+        "start_distance_cells": 62.64,
+        "first_observed_arrival_step": 9,
+        "step_displacements_cells": [
+          6.08,
+          4.47,
+          6.08,
+          4.47,
+          7.28,
+          8.25,
+          7.62,
+          9.22,
+          9.49
+        ],
+        "max_observed_step_displacement_cells": 9.49,
+        "path_length_observed_cells": 62.96
+      },
+      {
+        "agent_id": 9,
+        "type": "bulldozer",
+        "start": [
+          62.0,
+          20.0
+        ],
+        "target": [
+          80,
+          80
+        ],
+        "start_distance_cells": 62.64,
+        "first_observed_arrival_step": 8,
+        "step_displacements_cells": [
+          7.28,
+          8.25,
+          7.28,
+          8.54,
+          8.25,
+          7.62,
+          8.25,
+          7.28,
+          0.0
+        ],
+        "max_observed_step_displacement_cells": 8.54,
+        "path_length_observed_cells": 62.75
+      },
+      {
+        "agent_id": 10,
+        "type": "drone",
+        "start": [
+          62.0,
+          20.0
+        ],
+        "target": [
+          80,
+          80
+        ],
+        "start_distance_cells": 62.64,
+        "first_observed_arrival_step": 4,
+        "step_displacements_cells": [
+          18.68,
+          19.92,
+          20.88,
+          3.16,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_observed_step_displacement_cells": 20.88,
+        "path_length_observed_cells": 62.64
+      },
+      {
+        "agent_id": 11,
+        "type": "helicopter",
+        "start": [
+          62.0,
+          20.0
+        ],
+        "target": [
+          80,
+          80
+        ],
+        "start_distance_cells": 62.64,
+        "first_observed_arrival_step": 3,
+        "step_displacements_cells": [
+          29.12,
+          29.41,
+          4.12,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_observed_step_displacement_cells": 29.41,
+        "path_length_observed_cells": 62.65
+      }
+    ],
+    "scope": "repeated low-level navigate to one coordinate; one Unity seed/route; before-action samples, no task operations"
+  },
+  {
+    "seed": 503,
+    "level": "Composite_D0_R1",
+    "rows": [
+      {
+        "agent_id": 1,
+        "type": "firefighter",
+        "start": [
+          49.0,
+          41.0
+        ],
+        "target": [
+          80,
+          80
+        ],
+        "start_distance_cells": 49.82,
+        "first_observed_arrival_step": 6,
+        "step_displacements_cells": [
+          9.22,
+          10.0,
+          8.6,
+          6.4,
+          8.49,
+          7.21,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_observed_step_displacement_cells": 10.0,
+        "path_length_observed_cells": 49.92
+      },
+      {
+        "agent_id": 9,
+        "type": "bulldozer",
+        "start": [
+          49.0,
+          41.0
+        ],
+        "target": [
+          80,
+          80
+        ],
+        "start_distance_cells": 49.82,
+        "first_observed_arrival_step": 7,
+        "step_displacements_cells": [
+          7.21,
+          7.81,
+          7.81,
+          7.81,
+          8.6,
+          7.81,
+          2.83,
+          0.0,
+          0.0
+        ],
+        "max_observed_step_displacement_cells": 8.6,
+        "path_length_observed_cells": 49.88
+      },
+      {
+        "agent_id": 10,
+        "type": "drone",
+        "start": [
+          49.0,
+          41.0
+        ],
+        "target": [
+          80,
+          80
+        ],
+        "start_distance_cells": 49.82,
+        "first_observed_arrival_step": 3,
+        "step_displacements_cells": [
+          19.21,
+          20.0,
+          10.63,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_observed_step_displacement_cells": 20.0,
+        "path_length_observed_cells": 49.84
+      },
+      {
+        "agent_id": 11,
+        "type": "helicopter",
+        "start": [
+          49.0,
+          41.0
+        ],
+        "target": [
+          80,
+          80
+        ],
+        "start_distance_cells": 49.82,
+        "first_observed_arrival_step": 2,
+        "step_displacements_cells": [
+          29.21,
+          20.62,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max_observed_step_displacement_cells": 29.21,
+        "path_length_observed_cells": 49.83
+      }
+    ],
+    "scope": "repeated low-level navigate to one coordinate; one Unity seed/route; before-action samples, no task operations"
+  }
+]

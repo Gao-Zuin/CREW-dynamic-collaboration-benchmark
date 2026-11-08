@@ -1,0 +1,214 @@
+{
+  "family": "composite",
+  "report_source": "benchmark_runs/composite_manager_audit_20261106",
+  "minimum_separation_cells": 40,
+  "selected_seeds": [
+    42,
+    256,
+    503,
+    314
+  ],
+  "candidates": [
+    {
+      "seed": 42,
+      "scarce_goals": {
+        "fire": [
+          23,
+          51
+        ],
+        "water": [
+          19,
+          28
+        ],
+        "civilian_cluster": [
+          51,
+          12
+        ]
+      },
+      "sufficient_goals": {
+        "fire": [
+          23,
+          51
+        ],
+        "water": [
+          19,
+          28
+        ],
+        "civilian_cluster": [
+          51,
+          12
+        ]
+      },
+      "same_initial_goals": true,
+      "original_fire_matches_manager": true,
+      "new_fire": [
+        80,
+        80
+      ],
+      "separation_cells": 63.95,
+      "event_ignition_supported_both": true,
+      "independent_front_geometry_gate": true
+    },
+    {
+      "seed": 256,
+      "scarce_goals": {
+        "fire": [
+          63,
+          28
+        ],
+        "water": [
+          74,
+          29
+        ],
+        "civilian_cluster": [
+          23,
+          82
+        ]
+      },
+      "sufficient_goals": {
+        "fire": [
+          63,
+          28
+        ],
+        "water": [
+          74,
+          29
+        ],
+        "civilian_cluster": [
+          23,
+          82
+        ]
+      },
+      "same_initial_goals": true,
+      "original_fire_matches_manager": true,
+      "new_fire": [
+        80,
+        80
+      ],
+      "separation_cells": 54.71,
+      "event_ignition_supported_both": true,
+      "independent_front_geometry_gate": true
+    },
+    {
+      "seed": 503,
+      "scarce_goals": {
+        "fire": [
+          39,
+          78
+        ],
+        "water": [
+          31,
+          16
+        ],
+        "civilian_cluster": [
+          79,
+          23
+        ]
+      },
+      "sufficient_goals": {
+        "fire": [
+          39,
+          78
+        ],
+        "water": [
+          31,
+          16
+        ],
+        "civilian_cluster": [
+          79,
+          23
+        ]
+      },
+      "same_initial_goals": true,
+      "original_fire_matches_manager": true,
+      "new_fire": [
+        80,
+        80
+      ],
+      "separation_cells": 41.05,
+      "event_ignition_supported_both": true,
+      "independent_front_geometry_gate": true
+    },
+    {
+      "seed": 819,
+      "scarce_goals": {
+        "fire": [
+          61,
+          75
+        ],
+        "water": [
+          63,
+          54
+        ],
+        "civilian_cluster": [
+          87,
+          33
+        ]
+      },
+      "sufficient_goals": {
+        "fire": [
+          61,
+          75
+        ],
+        "water": [
+          63,
+          54
+        ],
+        "civilian_cluster": [
+          87,
+          33
+        ]
+      },
+      "same_initial_goals": true,
+      "original_fire_matches_manager": true,
+      "new_fire": [
+        80,
+        80
+      ],
+      "separation_cells": 19.65,
+      "event_ignition_supported_both": true,
+      "independent_front_geometry_gate": false
+    },
+    {
+      "seed": 314,
+      "scarce_goals": {
+        "fire": [
+          32,
+          54
+        ],
+        "water": [
+          91,
+          90
+        ],
+        "civilian_cluster": [
+          75,
+          14
+        ]
+      },
+      "sufficient_goals": {
+        "fire": [
+          32,
+          54
+        ],
+        "water": [
+          91,
+          90
+        ],
+        "civilian_cluster": [
+          75,
+          14
+        ]
+      },
+      "same_initial_goals": true,
+      "original_fire_matches_manager": true,
+      "new_fire": [
+        80,
+        80
+      ],
+      "separation_cells": 54.59,
+      "event_ignition_supported_both": true,
+      "independent_front_geometry_gate": true
+    }
+  ],
+  "scope": "10-step NOOP Unity ignition and initial geometry only; no task solvability or policy effect"
+}

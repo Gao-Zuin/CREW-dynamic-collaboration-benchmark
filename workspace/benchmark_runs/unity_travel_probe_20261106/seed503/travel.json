@@ -1,0 +1,381 @@
+{
+  "level": "Composite_D0_R1",
+  "seed": 503,
+  "target": [
+    80,
+    80
+  ],
+  "action": "repeat low-level navigate [0,80,80] for one worker of each type",
+  "samples_before_action": [
+    {
+      "step": 0,
+      "workers": [
+        {
+          "agent_id": 1,
+          "agent_type": 0,
+          "position": [
+            49.0,
+            41.0
+          ]
+        },
+        {
+          "agent_id": 9,
+          "agent_type": 1,
+          "position": [
+            49.0,
+            41.0
+          ]
+        },
+        {
+          "agent_id": 10,
+          "agent_type": 2,
+          "position": [
+            49.0,
+            41.0
+          ]
+        },
+        {
+          "agent_id": 11,
+          "agent_type": 3,
+          "position": [
+            49.0,
+            41.0
+          ]
+        }
+      ]
+    },
+    {
+      "step": 1,
+      "workers": [
+        {
+          "agent_id": 1,
+          "agent_type": 0,
+          "position": [
+            55.0,
+            48.0
+          ]
+        },
+        {
+          "agent_id": 9,
+          "agent_type": 1,
+          "position": [
+            53.0,
+            47.0
+          ]
+        },
+        {
+          "agent_id": 10,
+          "agent_type": 2,
+          "position": [
+            61.0,
+            56.0
+          ]
+        },
+        {
+          "agent_id": 11,
+          "agent_type": 3,
+          "position": [
+            67.0,
+            64.0
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "workers": [
+        {
+          "agent_id": 1,
+          "agent_type": 0,
+          "position": [
+            61.0,
+            56.0
+          ]
+        },
+        {
+          "agent_id": 9,
+          "agent_type": 1,
+          "position": [
+            58.0,
+            53.0
+          ]
+        },
+        {
+          "agent_id": 10,
+          "agent_type": 2,
+          "position": [
+            73.0,
+            72.0
+          ]
+        },
+        {
+          "agent_id": 11,
+          "agent_type": 3,
+          "position": [
+            80.0,
+            80.0
+          ]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "workers": [
+        {
+          "agent_id": 1,
+          "agent_type": 0,
+          "position": [
+            66.0,
+            63.0
+          ]
+        },
+        {
+          "agent_id": 9,
+          "agent_type": 1,
+          "position": [
+            63.0,
+            59.0
+          ]
+        },
+        {
+          "agent_id": 10,
+          "agent_type": 2,
+          "position": [
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "agent_id": 11,
+          "agent_type": 3,
+          "position": [
+            80.0,
+            80.0
+          ]
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "workers": [
+        {
+          "agent_id": 1,
+          "agent_type": 0,
+          "position": [
+            70.0,
+            68.0
+          ]
+        },
+        {
+          "agent_id": 9,
+          "agent_type": 1,
+          "position": [
+            68.0,
+            65.0
+          ]
+        },
+        {
+          "agent_id": 10,
+          "agent_type": 2,
+          "position": [
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "agent_id": 11,
+          "agent_type": 3,
+          "position": [
+            80.0,
+            80.0
+          ]
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "workers": [
+        {
+          "agent_id": 1,
+          "agent_type": 0,
+          "position": [
+            76.0,
+            74.0
+          ]
+        },
+        {
+          "agent_id": 9,
+          "agent_type": 1,
+          "position": [
+            73.0,
+            72.0
+          ]
+        },
+        {
+          "agent_id": 10,
+          "agent_type": 2,
+          "position": [
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "agent_id": 11,
+          "agent_type": 3,
+          "position": [
+            80.0,
+            80.0
+          ]
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "workers": [
+        {
+          "agent_id": 1,
+          "agent_type": 0,
+          "position": [
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "agent_id": 9,
+          "agent_type": 1,
+          "position": [
+            78.0,
+            78.0
+          ]
+        },
+        {
+          "agent_id": 10,
+          "agent_type": 2,
+          "position": [
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "agent_id": 11,
+          "agent_type": 3,
+          "position": [
+            80.0,
+            80.0
+          ]
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "workers": [
+        {
+          "agent_id": 1,
+          "agent_type": 0,
+          "position": [
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "agent_id": 9,
+          "agent_type": 1,
+          "position": [
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "agent_id": 10,
+          "agent_type": 2,
+          "position": [
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "agent_id": 11,
+          "agent_type": 3,
+          "position": [
+            80.0,
+            80.0
+          ]
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "workers": [
+        {
+          "agent_id": 1,
+          "agent_type": 0,
+          "position": [
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "agent_id": 9,
+          "agent_type": 1,
+          "position": [
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "agent_id": 10,
+          "agent_type": 2,
+          "position": [
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "agent_id": 11,
+          "agent_type": 3,
+          "position": [
+            80.0,
+            80.0
+          ]
+        }
+      ]
+    },
+    {
+      "step": 9,
+      "workers": [
+        {
+          "agent_id": 1,
+          "agent_type": 0,
+          "position": [
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "agent_id": 9,
+          "agent_type": 1,
+          "position": [
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "agent_id": 10,
+          "agent_type": 2,
+          "position": [
+            80.0,
+            80.0
+          ]
+        },
+        {
+          "agent_id": 11,
+          "agent_type": 3,
+          "position": [
+            80.0,
+            80.0
+          ]
+        }
+      ]
+    }
+  ]
+}

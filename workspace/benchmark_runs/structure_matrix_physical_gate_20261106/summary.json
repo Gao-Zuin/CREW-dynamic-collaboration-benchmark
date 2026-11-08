@@ -1,0 +1,69 @@
+{
+  "family": "structure",
+  "minimum_separation_cells": 40,
+  "selected_seeds": [
+    42,
+    256,
+    503,
+    819
+  ],
+  "candidates": [
+    {
+      "seed": 42,
+      "original_fire": [
+        20,
+        51
+      ],
+      "new_fire": [
+        80,
+        80
+      ],
+      "separation_cells": 66.64,
+      "event_ignition_supported": true,
+      "independent_front_geometry_gate": true
+    },
+    {
+      "seed": 256,
+      "original_fire": [
+        66,
+        25
+      ],
+      "new_fire": [
+        80,
+        80
+      ],
+      "separation_cells": 56.75,
+      "event_ignition_supported": true,
+      "independent_front_geometry_gate": true
+    },
+    {
+      "seed": 503,
+      "original_fire": [
+        38,
+        83
+      ],
+      "new_fire": [
+        80,
+        80
+      ],
+      "separation_cells": 42.11,
+      "event_ignition_supported": true,
+      "independent_front_geometry_gate": true
+    },
+    {
+      "seed": 819,
+      "original_fire": [
+        87,
+        32
+      ],
+      "new_fire": [
+        80,
+        80
+      ],
+      "separation_cells": 48.51,
+      "event_ignition_supported": true,
+      "independent_front_geometry_gate": true
+    }
+  ],
+  "scope": "10-step NOOP Unity ignition and initial geometry only; no task solvability or policy effect"
+}
