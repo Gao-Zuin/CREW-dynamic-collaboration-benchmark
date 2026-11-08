@@ -17,8 +17,9 @@ Clone the upstream repositories at the commits in `SOURCE_MANIFEST.json`, then c
 To refresh this source repository from the sibling `CREW` workspace:
 
 ```bash
-python sync_from_workspace.py
-git status --short
+bash publish_update.sh "Describe the update"
 ```
+
+The script refreshes the export, checks whitespace errors, commits changes, and pushes `main` to `origin`. It needs an existing GitHub repository configured as `origin`.
 
 The upstream ORCH and WILDFIRE-ORCH repositories carry the Apache-2.0 license; see `LICENSE.upstream-ORCH`. This export deliberately excludes downloaded papers, model credentials, binaries, environments, and raw run logs.
