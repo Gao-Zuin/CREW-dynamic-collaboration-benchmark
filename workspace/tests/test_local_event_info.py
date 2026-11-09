@@ -89,6 +89,26 @@ class LocalEventInfoTests(unittest.TestCase):
             self.assertNotIn('80', json.dumps(messages))
         self.assertTrue(any(e['event_type'] == 'TASK_EVENT_LOCATION_WITHHELD' for e in self.bridge.c.events))
 
+    def test_new_civilian_location_is_local_until_worker_reaches_it(self):
+        event = {'timestep': 8, 'action': 'spawn_civilians_5', 'x': 20, 'y': 80,
+                 'announcement': 'Five civilians at (20,80)!'}
+        self.bridge.step = 8
+        self.world['step'] = 8
+        self.bridge.graph.observe(self.world)
+        with patch.object(RuntimeBridge, 'after_step'):
+            self.bridge.after_step({}, list(self.agents.values()), {}, {'submitted_events': [event]})
+        notice = self.bridge.graph.environment_notices[-1]['event']
+        self.assertEqual(notice['action'], 'civilian_alert')
+        self.assertNotIn('20', json.dumps(notice))
+        self.assertNotIn('80', json.dumps(notice))
+        self.assertNotIn('20', json.dumps(self.bridge.graph.decision_state()))
+        self.bridge.c.nodes = {'1': {'online': True, 'position': [19, 80]},
+                               '2': {'online': True, 'position': [80, 20]}}
+        self.bridge._deliver_local_event_cues([event])
+        self.assertIn('20, 80', self.agents['1'].chat_history['ENVIRONMENT'][-1][1])
+        self.assertNotIn('ENVIRONMENT', self.agents['2'].chat_history)
+        self.assertEqual(self.bridge.c.events[-1]['payload']['event_action'], 'spawn_civilians_5')
+
 
 if __name__ == '__main__':
     unittest.main()

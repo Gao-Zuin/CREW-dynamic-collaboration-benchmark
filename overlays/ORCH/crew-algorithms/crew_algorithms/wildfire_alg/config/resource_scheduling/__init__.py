@@ -8,12 +8,15 @@ def create_level_presets(deadline_profile=None, family="focused"):
     """Optionally announce a candidate deadline; stock runner does not score it."""
     if deadline_profile not in (None, 'relaxed', 'urgent'):
         raise ValueError('deadline_profile must be relaxed, urgent, or None')
-    if family not in ('focused', 'combined', 'structure', 'composite'):
-        raise ValueError('family must be focused, combined, structure, or composite')
+    if family not in ('focused', 'combined', 'structure', 'composite', 'scenarios'):
+        raise ValueError('family must be focused, combined, structure, composite, or scenarios')
+    if family == 'scenarios' and deadline_profile is not None:
+        raise ValueError('scenarios do not define deadline profiles yet')
     filename = {'focused': 'focused_tasks.json', 'combined': 'tasks.json',
                 'structure': 'structure_matrix.json',
-                'composite': 'composite_matrix.json'}[family]
-    rows = json.loads(Path(__file__).with_name(filename).read_text())
+                'composite': 'composite_matrix.json',
+                'scenarios': 'scenarios/tasks.json'}[family]
+    rows = json.loads((Path(__file__).parent / filename).read_text())
     result = {}
     for row in rows:
         preset = deepcopy(row['preset'])

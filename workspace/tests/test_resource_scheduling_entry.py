@@ -32,6 +32,21 @@ class SchedulingEntryTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 create_level_presets()
 
+    def test_concrete_scenarios_load_into_standard_runner(self):
+        with patch.dict(os.environ, {'CREW_RESOURCE_SCHEDULING_FAMILY': 'scenarios'}):
+            levels = create_level_presets()
+        self.assertEqual(len([name for name in levels if name.endswith(('_LocalAlert', '_PublicLocation'))
+                              or name.startswith('OriginalFireAndFiveCivilians_')]), 42)
+        name = 'OneCivilianThenTwoFires_OneDrone_LocalAlert'
+        cfg = {}
+        update_config(levels[name], 42, cfg)
+        self.assertEqual(cfg['game_type'], 5)
+        self.assertEqual(cfg['starting_drone_agents'], 1)
+        self.assertEqual([(e['timestep'], e['action']) for e in cfg['scheduled_events']],
+                         [(8, 'spawn_civilian'), (12, 'start_fire'), (20, 'start_fire')])
+        self.assertTrue(all(0 < e['x'] < cfg['map_size'] and
+                            0 < e['y'] < cfg['map_size'] for e in cfg['scheduled_events']))
+
 
 if __name__ == '__main__':
     unittest.main()

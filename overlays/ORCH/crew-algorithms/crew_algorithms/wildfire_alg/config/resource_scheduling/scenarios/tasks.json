@@ -1,0 +1,2054 @@
+[
+  {
+    "id": "SecondFireAt80_80_OneDrone_LocalAlert",
+    "preset": {
+      "name": "SecondFireAt80_80_OneDrone_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "SecondFireAt80_80",
+      "information_mode": "local_alert",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "SecondFireAt80_80_OneDrone_PublicLocation",
+    "preset": {
+      "name": "SecondFireAt80_80_OneDrone_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "SecondFireAt80_80",
+      "information_mode": "public_location",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "SecondFireAt80_80_TwoDrones_LocalAlert",
+    "preset": {
+      "name": "SecondFireAt80_80_TwoDrones_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "SecondFireAt80_80",
+      "information_mode": "local_alert",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "SecondFireAt80_80_TwoDrones_PublicLocation",
+    "preset": {
+      "name": "SecondFireAt80_80_TwoDrones_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "SecondFireAt80_80",
+      "information_mode": "public_location",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80_OneDrone_LocalAlert",
+    "preset": {
+      "name": "FiveCiviliansAt20_80_OneDrone_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80",
+      "information_mode": "local_alert",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "five more civilians were reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80_OneDrone_PublicLocation",
+    "preset": {
+      "name": "FiveCiviliansAt20_80_OneDrone_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80",
+      "information_mode": "public_location",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "five more civilians were reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80_TwoDrones_LocalAlert",
+    "preset": {
+      "name": "FiveCiviliansAt20_80_TwoDrones_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80",
+      "information_mode": "local_alert",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "five more civilians were reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80_TwoDrones_PublicLocation",
+    "preset": {
+      "name": "FiveCiviliansAt20_80_TwoDrones_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80",
+      "information_mode": "public_location",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "five more civilians were reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "SecondFireThenFiveCivilians_OneDrone_LocalAlert",
+    "preset": {
+      "name": "SecondFireThenFiveCivilians_OneDrone_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "SecondFireThenFiveCivilians",
+      "information_mode": "local_alert",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)",
+        "five more civilians were reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "SecondFireThenFiveCivilians_OneDrone_PublicLocation",
+    "preset": {
+      "name": "SecondFireThenFiveCivilians_OneDrone_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "SecondFireThenFiveCivilians",
+      "information_mode": "public_location",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)",
+        "five more civilians were reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "SecondFireThenFiveCivilians_TwoDrones_LocalAlert",
+    "preset": {
+      "name": "SecondFireThenFiveCivilians_TwoDrones_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "SecondFireThenFiveCivilians",
+      "information_mode": "local_alert",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)",
+        "five more civilians were reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "SecondFireThenFiveCivilians_TwoDrones_PublicLocation",
+    "preset": {
+      "name": "SecondFireThenFiveCivilians_TwoDrones_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "SecondFireThenFiveCivilians",
+      "information_mode": "public_location",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)",
+        "five more civilians were reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FiveCiviliansThenSecondFire_OneDrone_LocalAlert",
+    "preset": {
+      "name": "FiveCiviliansThenSecondFire_OneDrone_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansThenSecondFire",
+      "information_mode": "local_alert",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "five more civilians were reported at (20,80)",
+        "a new fire was reported at (80,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FiveCiviliansThenSecondFire_OneDrone_PublicLocation",
+    "preset": {
+      "name": "FiveCiviliansThenSecondFire_OneDrone_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansThenSecondFire",
+      "information_mode": "public_location",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "five more civilians were reported at (20,80)",
+        "a new fire was reported at (80,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FiveCiviliansThenSecondFire_TwoDrones_LocalAlert",
+    "preset": {
+      "name": "FiveCiviliansThenSecondFire_TwoDrones_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansThenSecondFire",
+      "information_mode": "local_alert",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "five more civilians were reported at (20,80)",
+        "a new fire was reported at (80,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FiveCiviliansThenSecondFire_TwoDrones_PublicLocation",
+    "preset": {
+      "name": "FiveCiviliansThenSecondFire_TwoDrones_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansThenSecondFire",
+      "information_mode": "public_location",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "five more civilians were reported at (20,80)",
+        "a new fire was reported at (80,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FireAt80_80ThenFireAt20_80_OneDrone_LocalAlert",
+    "preset": {
+      "name": "FireAt80_80ThenFireAt20_80_OneDrone_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 16,
+          "action": "start_fire",
+          "x": 20,
+          "y": 80,
+          "announcement": "A new fire was reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FireAt80_80ThenFireAt20_80",
+      "information_mode": "local_alert",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)",
+        "a new fire was reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FireAt80_80ThenFireAt20_80_OneDrone_PublicLocation",
+    "preset": {
+      "name": "FireAt80_80ThenFireAt20_80_OneDrone_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 16,
+          "action": "start_fire",
+          "x": 20,
+          "y": 80,
+          "announcement": "A new fire was reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FireAt80_80ThenFireAt20_80",
+      "information_mode": "public_location",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)",
+        "a new fire was reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FireAt80_80ThenFireAt20_80_TwoDrones_LocalAlert",
+    "preset": {
+      "name": "FireAt80_80ThenFireAt20_80_TwoDrones_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 16,
+          "action": "start_fire",
+          "x": 20,
+          "y": 80,
+          "announcement": "A new fire was reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FireAt80_80ThenFireAt20_80",
+      "information_mode": "local_alert",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)",
+        "a new fire was reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FireAt80_80ThenFireAt20_80_TwoDrones_PublicLocation",
+    "preset": {
+      "name": "FireAt80_80ThenFireAt20_80_TwoDrones_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 16,
+          "action": "start_fire",
+          "x": 20,
+          "y": 80,
+          "announcement": "A new fire was reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FireAt80_80ThenFireAt20_80",
+      "information_mode": "public_location",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)",
+        "a new fire was reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FiveCiviliansThenNearbyFire_OneDrone_LocalAlert",
+    "preset": {
+      "name": "FiveCiviliansThenNearbyFire_OneDrone_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "start_fire",
+          "x": 20,
+          "y": 70,
+          "announcement": "A new fire was reported at (20,70). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansThenNearbyFire",
+      "information_mode": "local_alert",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "five more civilians were reported at (20,80)",
+        "a new fire was reported at (20,70)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FiveCiviliansThenNearbyFire_OneDrone_PublicLocation",
+    "preset": {
+      "name": "FiveCiviliansThenNearbyFire_OneDrone_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "start_fire",
+          "x": 20,
+          "y": 70,
+          "announcement": "A new fire was reported at (20,70). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansThenNearbyFire",
+      "information_mode": "public_location",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "five more civilians were reported at (20,80)",
+        "a new fire was reported at (20,70)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FiveCiviliansThenNearbyFire_TwoDrones_LocalAlert",
+    "preset": {
+      "name": "FiveCiviliansThenNearbyFire_TwoDrones_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "start_fire",
+          "x": 20,
+          "y": 70,
+          "announcement": "A new fire was reported at (20,70). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansThenNearbyFire",
+      "information_mode": "local_alert",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "five more civilians were reported at (20,80)",
+        "a new fire was reported at (20,70)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "FiveCiviliansThenNearbyFire_TwoDrones_PublicLocation",
+    "preset": {
+      "name": "FiveCiviliansThenNearbyFire_TwoDrones_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five more civilians were reported at (20,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "start_fire",
+          "x": 20,
+          "y": 70,
+          "announcement": "A new fire was reported at (20,70). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansThenNearbyFire",
+      "information_mode": "public_location",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "five more civilians were reported at (20,80)",
+        "a new fire was reported at (20,70)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "OneCivilianAt80_20_OneDrone_LocalAlert",
+    "preset": {
+      "name": "OneCivilianAt80_20_OneDrone_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilian",
+          "x": 80,
+          "y": 20,
+          "announcement": "One more civilian was reported at (80,20). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "OneCivilianAt80_20",
+      "information_mode": "local_alert",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "one more civilian was reported at (80,20)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "OneCivilianAt80_20_OneDrone_PublicLocation",
+    "preset": {
+      "name": "OneCivilianAt80_20_OneDrone_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilian",
+          "x": 80,
+          "y": 20,
+          "announcement": "One more civilian was reported at (80,20). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "OneCivilianAt80_20",
+      "information_mode": "public_location",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "one more civilian was reported at (80,20)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "OneCivilianAt80_20_TwoDrones_LocalAlert",
+    "preset": {
+      "name": "OneCivilianAt80_20_TwoDrones_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilian",
+          "x": 80,
+          "y": 20,
+          "announcement": "One more civilian was reported at (80,20). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "OneCivilianAt80_20",
+      "information_mode": "local_alert",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "one more civilian was reported at (80,20)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "OneCivilianAt80_20_TwoDrones_PublicLocation",
+    "preset": {
+      "name": "OneCivilianAt80_20_TwoDrones_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilian",
+          "x": 80,
+          "y": 20,
+          "announcement": "One more civilian was reported at (80,20). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "OneCivilianAt80_20",
+      "information_mode": "public_location",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "one more civilian was reported at (80,20)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "LateFireAt80_80_OneDrone_LocalAlert",
+    "preset": {
+      "name": "LateFireAt80_80_OneDrone_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 16,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "LateFireAt80_80",
+      "information_mode": "local_alert",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "LateFireAt80_80_OneDrone_PublicLocation",
+    "preset": {
+      "name": "LateFireAt80_80_OneDrone_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 16,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "LateFireAt80_80",
+      "information_mode": "public_location",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "LateFireAt80_80_TwoDrones_LocalAlert",
+    "preset": {
+      "name": "LateFireAt80_80_TwoDrones_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 16,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "LateFireAt80_80",
+      "information_mode": "local_alert",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "LateFireAt80_80_TwoDrones_PublicLocation",
+    "preset": {
+      "name": "LateFireAt80_80_TwoDrones_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 16,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "LateFireAt80_80",
+      "information_mode": "public_location",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "SecondFireThenOneCivilian_OneDrone_LocalAlert",
+    "preset": {
+      "name": "SecondFireThenOneCivilian_OneDrone_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "spawn_civilian",
+          "x": 20,
+          "y": 80,
+          "announcement": "One more civilian was reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "SecondFireThenOneCivilian",
+      "information_mode": "local_alert",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)",
+        "one more civilian was reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "SecondFireThenOneCivilian_OneDrone_PublicLocation",
+    "preset": {
+      "name": "SecondFireThenOneCivilian_OneDrone_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "spawn_civilian",
+          "x": 20,
+          "y": 80,
+          "announcement": "One more civilian was reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "SecondFireThenOneCivilian",
+      "information_mode": "public_location",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)",
+        "one more civilian was reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "SecondFireThenOneCivilian_TwoDrones_LocalAlert",
+    "preset": {
+      "name": "SecondFireThenOneCivilian_TwoDrones_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "spawn_civilian",
+          "x": 20,
+          "y": 80,
+          "announcement": "One more civilian was reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "SecondFireThenOneCivilian",
+      "information_mode": "local_alert",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)",
+        "one more civilian was reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "SecondFireThenOneCivilian_TwoDrones_PublicLocation",
+    "preset": {
+      "name": "SecondFireThenOneCivilian_TwoDrones_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "spawn_civilian",
+          "x": 20,
+          "y": 80,
+          "announcement": "One more civilian was reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "SecondFireThenOneCivilian",
+      "information_mode": "public_location",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "a new fire was reported at (80,80)",
+        "one more civilian was reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "OneCivilianThenTwoFires_OneDrone_LocalAlert",
+    "preset": {
+      "name": "OneCivilianThenTwoFires_OneDrone_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilian",
+          "x": 80,
+          "y": 20,
+          "announcement": "One more civilian was reported at (80,20). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 20,
+          "action": "start_fire",
+          "x": 20,
+          "y": 80,
+          "announcement": "A new fire was reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "OneCivilianThenTwoFires",
+      "information_mode": "local_alert",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "one more civilian was reported at (80,20)",
+        "a new fire was reported at (80,80)",
+        "a new fire was reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "OneCivilianThenTwoFires_OneDrone_PublicLocation",
+    "preset": {
+      "name": "OneCivilianThenTwoFires_OneDrone_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilian",
+          "x": 80,
+          "y": 20,
+          "announcement": "One more civilian was reported at (80,20). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 20,
+          "action": "start_fire",
+          "x": 20,
+          "y": 80,
+          "announcement": "A new fire was reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "OneCivilianThenTwoFires",
+      "information_mode": "public_location",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "one more civilian was reported at (80,20)",
+        "a new fire was reported at (80,80)",
+        "a new fire was reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "OneCivilianThenTwoFires_TwoDrones_LocalAlert",
+    "preset": {
+      "name": "OneCivilianThenTwoFires_TwoDrones_LocalAlert",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilian",
+          "x": 80,
+          "y": 20,
+          "announcement": "One more civilian was reported at (80,20). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 20,
+          "action": "start_fire",
+          "x": 20,
+          "y": 80,
+          "announcement": "A new fire was reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "OneCivilianThenTwoFires",
+      "information_mode": "local_alert",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "one more civilian was reported at (80,20)",
+        "a new fire was reported at (80,80)",
+        "a new fire was reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "OneCivilianThenTwoFires_TwoDrones_PublicLocation",
+    "preset": {
+      "name": "OneCivilianThenTwoFires_TwoDrones_PublicLocation",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilian",
+          "x": 80,
+          "y": 20,
+          "announcement": "One more civilian was reported at (80,20). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 12,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A new fire was reported at (80,80). Continue and reprioritize active work."
+        },
+        {
+          "timestep": 20,
+          "action": "start_fire",
+          "x": 20,
+          "y": 80,
+          "announcement": "A new fire was reported at (20,80). Continue and reprioritize active work."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "OneCivilianThenTwoFires",
+      "information_mode": "public_location",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [
+        "one more civilian was reported at (80,20)",
+        "a new fire was reported at (80,80)",
+        "a new fire was reported at (20,80)"
+      ],
+      "status": "ORCH_config_ready; Unity_event_and_task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score initial/new civilians or each fire"
+    }
+  },
+  {
+    "id": "OriginalFireAndFiveCivilians_OneDrone",
+    "preset": {
+      "name": "OriginalFireAndFiveCivilians_OneDrone",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": []
+    },
+    "design": {
+      "event_sequence": "NoLaterEvent",
+      "information_mode": "none",
+      "drone_count": 1,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [],
+      "status": "ORCH_config_ready; task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score civilian rescue"
+    }
+  },
+  {
+    "id": "OriginalFireAndFiveCivilians_TwoDrones",
+    "preset": {
+      "name": "OriginalFireAndFiveCivilians_TwoDrones",
+      "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 2,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": []
+    },
+    "design": {
+      "event_sequence": "NoLaterEvent",
+      "information_mode": "none",
+      "drone_count": 2,
+      "initial_goals": [
+        "contain original fire",
+        "rescue initial five civilians"
+      ],
+      "later_goals": [],
+      "status": "ORCH_config_ready; task_outcome_not_yet_validated",
+      "scoring_limit": "native Full_Game success does not separately score civilian rescue"
+    }
+  }
+]

@@ -372,37 +372,39 @@ class TaskRuntimeBridge(RuntimeBridge):
         submitted = global_data.get("submitted_events", [])
         for event in submitted:
             if event.get("timestep") == self.step:
-                if self.local_event_info and event.get("action") == "start_fire":
-                    notice = {"timestep": event["timestep"], "action": "fire_alert",
-                              "announcement": "Possible new fire reported; location unconfirmed. "
-                                              "Scout locally and report coordinates through group communication."}
+                if self.local_event_info and event.get("action") in ("start_fire", "spawn_civilian", "spawn_civilians_5"):
+                    fire = event["action"] == "start_fire"
+                    notice = {"timestep": event["timestep"],
+                              "action": "fire_alert" if fire else "civilian_alert",
+                              "announcement": ("Possible new fire reported" if fire else "Additional civilians reported") +
+                                              "; location unconfirmed. Scout locally and report coordinates through group communication."}
                     self.graph.receive_environment_event(notice)
                     self.c.emit("TASK_EVENT_LOCATION_WITHHELD", {
-                        "step": self.step, "source_action": "start_fire",
+                        "step": self.step, "source_action": event["action"],
                         "reason": "local_information_condition",
                         "world_event_still_submitted": True})
                 else:
                     self.graph.receive_environment_event(event)
         for event in submitted:
-            if event.get("action") != "start_fire":
+            if event.get("action") not in ("start_fire", "spawn_civilian", "spawn_civilians_5"):
                 continue
-            key = (event["timestep"], event.get("x"), event.get("y"))
-            if not any((candidate["timestep"], candidate.get("x"), candidate.get("y")) == key
+            key = (event["timestep"], event.get("action"), event.get("x"), event.get("y"))
+            if not any((candidate["timestep"], candidate.get("action"), candidate.get("x"), candidate.get("y")) == key
                        for candidate in self.local_event_candidates):
                 self.local_event_candidates.append(dict(event))
         self._deliver_local_event_cues(self.local_event_candidates)
         self._record_source_view_fire_sightings()
 
     def _deliver_local_event_cues(self, events):
-        """Give a coordinate cue only to a nearby worker; it is not proof of fire."""
+        """Give a reported event coordinate only to a nearby worker."""
         if not self.local_event_info:
             return
         for event in events:
-            if event.get("action") != "start_fire":
+            if event.get("action") not in ("start_fire", "spawn_civilian", "spawn_civilians_5"):
                 continue
             target = (float(event["x"]), float(event["y"]))
             for aid, node in self.c.nodes.items():
-                key = (event["timestep"], aid)
+                key = (event["timestep"], event["action"], aid)
                 if key in self.local_cues_sent or not node.get("online"):
                     continue
                 position = node.get("position")
@@ -412,20 +414,26 @@ class TaskRuntimeBridge(RuntimeBridge):
                 agent = self.runtime_agents.get(aid)
                 if agent is None:
                     continue
-                content = (f"Nearby fire alert location: ({event['x']}, {event['y']}). "
-                           "This is a reported event coordinate, not confirmation of active fire. "
-                           "Inspect locally and report findings through your group.")
+                if event["action"] == "start_fire":
+                    content = (f"Nearby fire alert location: ({event['x']}, {event['y']}). "
+                               "This is a reported event coordinate, not confirmation of active fire. ")
+                else:
+                    content = (f"Nearby civilian report location: ({event['x']}, {event['y']}). "
+                               "This is a reported event coordinate, not proof civilians remain there. ")
+                content += "Inspect locally and report findings through your group."
                 agent.add_message("ENVIRONMENT", "LOCAL_EVENT_CUE", content, self.step)
                 self.local_cues_sent.add(key)
                 self.c.emit("TASK_LOCAL_EVENT_CUE_DELIVERED", {
                     "step": self.step, "recipient": aid, "event_timestep": event["timestep"],
-                    "event_action": "start_fire", "coordinate": list(target),
+                    "event_action": event["action"], "coordinate": list(target),
                     "worker_position": position, "radius": self.local_event_radius,
-                    "provenance": "proximity to submitted event coordinate; ignition unverified"})
+                    "provenance": "proximity to submitted event coordinate; current world state unverified"})
 
     def _record_source_view_fire_sightings(self):
         """Audit local fire cells, excluding the outer shared-memory crop."""
         for event in self.local_event_candidates:
+            if event.get('action') != 'start_fire':
+                continue
             target = (float(event['x']), float(event['y']))
             for aid, node in self.c.nodes.items():
                 key = (event['timestep'], aid)
