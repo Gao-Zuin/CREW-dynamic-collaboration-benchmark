@@ -47,6 +47,21 @@ class SchedulingEntryTests(unittest.TestCase):
         self.assertTrue(all(0 < e['x'] < cfg['map_size'] and
                             0 < e['y'] < cfg['map_size'] for e in cfg['scheduled_events']))
 
+    def test_fire_near_civilians_cases_keep_cross_group_workers_available(self):
+        with patch.dict(os.environ, {'CREW_RESOURCE_SCHEDULING_FAMILY': 'fire_near_civilians'}):
+            levels = create_level_presets()
+        cases = {name: preset for name, preset in levels.items()
+                 if name.endswith(('_WorkerReport', '_OrganizerDirect')) and
+                 'Dozer' in name and 'Helicopter' in name}
+        self.assertEqual(len(cases), 24)
+        one = cases['FiveCiviliansAt20_80ThenFireAt20_65_OneDozerOneHelicopter_WorkerReport']
+        two = cases['FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersTwoHelicopters_WorkerReport']
+        self.assertEqual((one['starting_bulldozer_agents'], one['starting_helicopter_agents']), (1, 1))
+        self.assertEqual((two['starting_bulldozer_agents'], two['starting_helicopter_agents']), (2, 2))
+        self.assertEqual([(e['timestep'], e['action']) for e in one['scheduled_events']],
+                         [(8, 'spawn_civilians_5'), (14, 'start_fire')])
+        self.assertEqual(one['starting_drone_agents'], 1)
+
 
 if __name__ == '__main__':
     unittest.main()

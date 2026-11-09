@@ -1,0 +1,1474 @@
+[
+  {
+    "id": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerOneHelicopter_WorkerReport",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerOneHelicopter_WorkerReport",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "information_mode": "worker_report",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 1,
+        "helicopters": 1,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerOneHelicopter_OrganizerDirect",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerOneHelicopter_OrganizerDirect",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "information_mode": "organizer_direct",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 1,
+        "helicopters": 1,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersOneHelicopter_WorkerReport",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersOneHelicopter_WorkerReport",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 2,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "information_mode": "worker_report",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 2,
+        "helicopters": 1,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersOneHelicopter_OrganizerDirect",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersOneHelicopter_OrganizerDirect",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 2,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "information_mode": "organizer_direct",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 2,
+        "helicopters": 1,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerTwoHelicopters_WorkerReport",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerTwoHelicopters_WorkerReport",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 2,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "information_mode": "worker_report",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 1,
+        "helicopters": 2,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerTwoHelicopters_OrganizerDirect",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerTwoHelicopters_OrganizerDirect",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 2,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "information_mode": "organizer_direct",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 1,
+        "helicopters": 2,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersTwoHelicopters_WorkerReport",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersTwoHelicopters_WorkerReport",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 2,
+      "starting_bulldozer_agents": 2,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "information_mode": "worker_report",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 2,
+        "helicopters": 2,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersTwoHelicopters_OrganizerDirect",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersTwoHelicopters_OrganizerDirect",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 2,
+      "starting_bulldozer_agents": 2,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "information_mode": "organizer_direct",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 2,
+        "helicopters": 2,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerOneHelicopter_WorkerReport",
+    "preset": {
+      "name": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerOneHelicopter_WorkerReport",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "spawn_civilians_5",
+          "x": 80,
+          "y": 65,
+          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "information_mode": "worker_report",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 1,
+        "helicopters": 1,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerOneHelicopter_OrganizerDirect",
+    "preset": {
+      "name": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerOneHelicopter_OrganizerDirect",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "spawn_civilians_5",
+          "x": 80,
+          "y": 65,
+          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "information_mode": "organizer_direct",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 1,
+        "helicopters": 1,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersOneHelicopter_WorkerReport",
+    "preset": {
+      "name": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersOneHelicopter_WorkerReport",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 2,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "spawn_civilians_5",
+          "x": 80,
+          "y": 65,
+          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "information_mode": "worker_report",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 2,
+        "helicopters": 1,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersOneHelicopter_OrganizerDirect",
+    "preset": {
+      "name": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersOneHelicopter_OrganizerDirect",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 2,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "spawn_civilians_5",
+          "x": 80,
+          "y": 65,
+          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "information_mode": "organizer_direct",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 2,
+        "helicopters": 1,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerTwoHelicopters_WorkerReport",
+    "preset": {
+      "name": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerTwoHelicopters_WorkerReport",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 2,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "spawn_civilians_5",
+          "x": 80,
+          "y": 65,
+          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "information_mode": "worker_report",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 1,
+        "helicopters": 2,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerTwoHelicopters_OrganizerDirect",
+    "preset": {
+      "name": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerTwoHelicopters_OrganizerDirect",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 2,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "spawn_civilians_5",
+          "x": 80,
+          "y": 65,
+          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "information_mode": "organizer_direct",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 1,
+        "helicopters": 2,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersTwoHelicopters_WorkerReport",
+    "preset": {
+      "name": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersTwoHelicopters_WorkerReport",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 2,
+      "starting_bulldozer_agents": 2,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "spawn_civilians_5",
+          "x": 80,
+          "y": 65,
+          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "information_mode": "worker_report",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 2,
+        "helicopters": 2,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersTwoHelicopters_OrganizerDirect",
+    "preset": {
+      "name": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersTwoHelicopters_OrganizerDirect",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 2,
+      "starting_bulldozer_agents": 2,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "spawn_civilians_5",
+          "x": 80,
+          "y": 65,
+          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "information_mode": "organizer_direct",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 2,
+        "helicopters": 2,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerOneHelicopter_WorkerReport",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerOneHelicopter_WorkerReport",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        },
+        {
+          "timestep": 22,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "information_mode": "worker_report",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 1,
+        "helicopters": 1,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerOneHelicopter_OrganizerDirect",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerOneHelicopter_OrganizerDirect",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        },
+        {
+          "timestep": 22,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "information_mode": "organizer_direct",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 1,
+        "helicopters": 1,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersOneHelicopter_WorkerReport",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersOneHelicopter_WorkerReport",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 2,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        },
+        {
+          "timestep": 22,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "information_mode": "worker_report",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 2,
+        "helicopters": 1,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersOneHelicopter_OrganizerDirect",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersOneHelicopter_OrganizerDirect",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 1,
+      "starting_bulldozer_agents": 2,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        },
+        {
+          "timestep": 22,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "information_mode": "organizer_direct",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 2,
+        "helicopters": 1,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerTwoHelicopters_WorkerReport",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerTwoHelicopters_WorkerReport",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 2,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        },
+        {
+          "timestep": 22,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "information_mode": "worker_report",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 1,
+        "helicopters": 2,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerTwoHelicopters_OrganizerDirect",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerTwoHelicopters_OrganizerDirect",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 2,
+      "starting_bulldozer_agents": 1,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        },
+        {
+          "timestep": 22,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "information_mode": "organizer_direct",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 1,
+        "helicopters": 2,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersTwoHelicopters_WorkerReport",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersTwoHelicopters_WorkerReport",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 2,
+      "starting_bulldozer_agents": 2,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        },
+        {
+          "timestep": 22,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "information_mode": "worker_report",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 2,
+        "helicopters": 2,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  },
+  {
+    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersTwoHelicopters_OrganizerDirect",
+    "preset": {
+      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersTwoHelicopters_OrganizerDirect",
+      "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
+      "game_type": 5,
+      "map_size": 100,
+      "max_steps": 100,
+      "fire_spread_frequency": 500,
+      "civilian_count": 5,
+      "civilian_clusters": 1,
+      "civilian_move_frequency": 800,
+      "known": false,
+      "water": true,
+      "vegetation_density_offset": 30,
+      "starting_firefighter_agents": 8,
+      "starting_drone_agents": 1,
+      "starting_helicopter_agents": 2,
+      "starting_bulldozer_agents": 2,
+      "scheduled_events": [
+        {
+          "timestep": 8,
+          "action": "spawn_civilians_5",
+          "x": 20,
+          "y": 80,
+          "announcement": "Five civilians reported near (20,80)."
+        },
+        {
+          "timestep": 14,
+          "action": "start_fire",
+          "x": 20,
+          "y": 65,
+          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+        },
+        {
+          "timestep": 22,
+          "action": "start_fire",
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80)."
+        }
+      ]
+    },
+    "design": {
+      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "information_mode": "organizer_direct",
+      "group_sources": {
+        "original_fire": "bulldozer and firefighters",
+        "support": "helicopter and firefighters",
+        "recon": "drone and firefighter leader"
+      },
+      "capacity": {
+        "bulldozers": 2,
+        "helicopters": 2,
+        "drones": 1
+      },
+      "candidate_joint_work": [
+        "scout reports current fire and civilian positions",
+        "firefighters rescue the newly reported civilians",
+        "helicopter deploys firefighters when ground travel is too slow",
+        "bulldozer cuts a useful tree line only where observed trees threaten the approach"
+      ],
+      "status": "candidate; event effect, overlap, useful trees, deadlines, and group-change benefit unverified",
+      "native_score_limit": "Full_Game success checks fire extinction, not civilian rescue or cross-group handoff"
+    }
+  }
+]

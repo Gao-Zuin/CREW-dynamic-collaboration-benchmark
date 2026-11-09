@@ -2,14 +2,16 @@
 # Run one concrete event sequence through the ORCH task runner.
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-LEVEL="${SCENARIO:?set SCENARIO to a name from scenarios/tasks.json}"
+SCENARIO_FAMILY="${SCENARIO_FAMILY:-scenarios}"
+case "$SCENARIO_FAMILY" in scenarios|fire_near_civilians) ;; *) echo "SCENARIO_FAMILY must be scenarios or fire_near_civilians" >&2; exit 2;; esac
+LEVEL="${SCENARIO:?set SCENARIO to a name from the selected tasks.json}"
 ARM="${ARM:?set ARM=fixed or adaptive}"
 case "$ARM" in
   fixed) export CREW_HT_FIXED_GROUPS=1 ;;
   adaptive) export CREW_HT_FIXED_GROUPS=0 ;;
   *) echo "ARM must be fixed or adaptive" >&2; exit 2 ;;
 esac
-MODE="$(python - "$ROOT/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/scenarios/tasks.json" "$LEVEL" <<'PY'
+MODE="$(python - "$ROOT/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/$SCENARIO_FAMILY/tasks.json" "$LEVEL" <<'PY'
 import json
 import sys
 rows = json.load(open(sys.argv[1]))
@@ -24,11 +26,11 @@ case "$MODE" in
   organizer_direct|none) export CREW_HT_WORKER_EVENT_REPORT=0; export CREW_HT_LOCAL_EVENT_INFO=0 ;;
   *) echo "Unsupported information mode: $MODE" >&2; exit 2 ;;
 esac
-export CREW_RESOURCE_SCHEDULING_FAMILY=scenarios
+export CREW_RESOURCE_SCHEDULING_FAMILY="$SCENARIO_FAMILY"
 export CREW_HT_STRUCTURAL_INITIAL_PLAN=1
 export CREW_HT_ROUND_DELIVERY="${CREW_HT_ROUND_DELIVERY:-1}"
 export LEVEL
 export SEED="${SEED:-42}"
 export MAX_STEPS="${MAX_STEPS:-100}"
-export RUN_LOG_ROOT="${RUN_LOG_ROOT:-$ROOT/benchmark_runs/scenarios/${LEVEL}_seed${SEED}_${ARM}}"
+export RUN_LOG_ROOT="${RUN_LOG_ROOT:-$ROOT/benchmark_runs/${SCENARIO_FAMILY}/${LEVEL}_seed${SEED}_${ARM}}"
 exec bash "$ROOT/scripts/run_task_hypergraph.sh"
