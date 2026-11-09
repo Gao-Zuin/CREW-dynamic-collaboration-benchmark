@@ -54,8 +54,8 @@ class SchedulingEntryTests(unittest.TestCase):
                  if name.endswith(('_WorkerReport', '_OrganizerDirect')) and
                  'Dozer' in name and 'Helicopter' in name}
         self.assertEqual(len(cases), 24)
-        one = cases['FiveCiviliansAt20_80ThenFireAt20_65_OneDozerOneHelicopter_WorkerReport']
-        two = cases['FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersTwoHelicopters_WorkerReport']
+        one = cases['FiveCiviliansAt80_75ThenFireAt80_80_OneDozerOneHelicopter_WorkerReport']
+        two = cases['FiveCiviliansAt80_75ThenFireAt80_80_TwoDozersTwoHelicopters_WorkerReport']
         self.assertEqual((one['starting_bulldozer_agents'], one['starting_helicopter_agents']), (1, 1))
         self.assertEqual((two['starting_bulldozer_agents'], two['starting_helicopter_agents']), (2, 2))
         self.assertEqual([(e['timestep'], e['action']) for e in one['scheduled_events']],

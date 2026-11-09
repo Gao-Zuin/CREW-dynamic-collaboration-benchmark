@@ -1,8 +1,8 @@
 [
   {
-    "id": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerOneHelicopter_WorkerReport",
+    "id": "FiveCiviliansAt80_75ThenFireAt80_80_OneDozerOneHelicopter_WorkerReport",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerOneHelicopter_WorkerReport",
+      "name": "FiveCiviliansAt80_75ThenFireAt80_80_OneDozerOneHelicopter_WorkerReport",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -22,21 +22,21 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "event_sequence": "FiveCiviliansAt80_75ThenFireAt80_80",
       "information_mode": "worker_report",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -59,9 +59,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerOneHelicopter_OrganizerDirect",
+    "id": "FiveCiviliansAt80_75ThenFireAt80_80_OneDozerOneHelicopter_OrganizerDirect",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerOneHelicopter_OrganizerDirect",
+      "name": "FiveCiviliansAt80_75ThenFireAt80_80_OneDozerOneHelicopter_OrganizerDirect",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -81,21 +81,21 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "event_sequence": "FiveCiviliansAt80_75ThenFireAt80_80",
       "information_mode": "organizer_direct",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -118,9 +118,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersOneHelicopter_WorkerReport",
+    "id": "FiveCiviliansAt80_75ThenFireAt80_80_TwoDozersOneHelicopter_WorkerReport",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersOneHelicopter_WorkerReport",
+      "name": "FiveCiviliansAt80_75ThenFireAt80_80_TwoDozersOneHelicopter_WorkerReport",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -140,21 +140,21 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "event_sequence": "FiveCiviliansAt80_75ThenFireAt80_80",
       "information_mode": "worker_report",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -177,9 +177,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersOneHelicopter_OrganizerDirect",
+    "id": "FiveCiviliansAt80_75ThenFireAt80_80_TwoDozersOneHelicopter_OrganizerDirect",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersOneHelicopter_OrganizerDirect",
+      "name": "FiveCiviliansAt80_75ThenFireAt80_80_TwoDozersOneHelicopter_OrganizerDirect",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -199,21 +199,21 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "event_sequence": "FiveCiviliansAt80_75ThenFireAt80_80",
       "information_mode": "organizer_direct",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -236,9 +236,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerTwoHelicopters_WorkerReport",
+    "id": "FiveCiviliansAt80_75ThenFireAt80_80_OneDozerTwoHelicopters_WorkerReport",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerTwoHelicopters_WorkerReport",
+      "name": "FiveCiviliansAt80_75ThenFireAt80_80_OneDozerTwoHelicopters_WorkerReport",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -258,21 +258,21 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "event_sequence": "FiveCiviliansAt80_75ThenFireAt80_80",
       "information_mode": "worker_report",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -295,9 +295,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerTwoHelicopters_OrganizerDirect",
+    "id": "FiveCiviliansAt80_75ThenFireAt80_80_OneDozerTwoHelicopters_OrganizerDirect",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFireAt20_65_OneDozerTwoHelicopters_OrganizerDirect",
+      "name": "FiveCiviliansAt80_75ThenFireAt80_80_OneDozerTwoHelicopters_OrganizerDirect",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -317,21 +317,21 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "event_sequence": "FiveCiviliansAt80_75ThenFireAt80_80",
       "information_mode": "organizer_direct",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -354,9 +354,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersTwoHelicopters_WorkerReport",
+    "id": "FiveCiviliansAt80_75ThenFireAt80_80_TwoDozersTwoHelicopters_WorkerReport",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersTwoHelicopters_WorkerReport",
+      "name": "FiveCiviliansAt80_75ThenFireAt80_80_TwoDozersTwoHelicopters_WorkerReport",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -376,21 +376,21 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "event_sequence": "FiveCiviliansAt80_75ThenFireAt80_80",
       "information_mode": "worker_report",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -413,9 +413,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersTwoHelicopters_OrganizerDirect",
+    "id": "FiveCiviliansAt80_75ThenFireAt80_80_TwoDozersTwoHelicopters_OrganizerDirect",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFireAt20_65_TwoDozersTwoHelicopters_OrganizerDirect",
+      "name": "FiveCiviliansAt80_75ThenFireAt80_80_TwoDozersTwoHelicopters_OrganizerDirect",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -435,21 +435,21 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFireAt20_65",
+      "event_sequence": "FiveCiviliansAt80_75ThenFireAt80_80",
       "information_mode": "organizer_direct",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -472,9 +472,9 @@
     }
   },
   {
-    "id": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerOneHelicopter_WorkerReport",
+    "id": "FireAt80_80ThenFiveCiviliansAt80_75_OneDozerOneHelicopter_WorkerReport",
     "preset": {
-      "name": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerOneHelicopter_WorkerReport",
+      "name": "FireAt80_80ThenFiveCiviliansAt80_75_OneDozerOneHelicopter_WorkerReport",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -496,19 +496,19 @@
           "action": "start_fire",
           "x": 80,
           "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 14,
           "action": "spawn_civilians_5",
           "x": 80,
-          "y": 65,
-          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         }
       ]
     },
     "design": {
-      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_75",
       "information_mode": "worker_report",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -531,9 +531,9 @@
     }
   },
   {
-    "id": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerOneHelicopter_OrganizerDirect",
+    "id": "FireAt80_80ThenFiveCiviliansAt80_75_OneDozerOneHelicopter_OrganizerDirect",
     "preset": {
-      "name": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerOneHelicopter_OrganizerDirect",
+      "name": "FireAt80_80ThenFiveCiviliansAt80_75_OneDozerOneHelicopter_OrganizerDirect",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -555,19 +555,19 @@
           "action": "start_fire",
           "x": 80,
           "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 14,
           "action": "spawn_civilians_5",
           "x": 80,
-          "y": 65,
-          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         }
       ]
     },
     "design": {
-      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_75",
       "information_mode": "organizer_direct",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -590,9 +590,9 @@
     }
   },
   {
-    "id": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersOneHelicopter_WorkerReport",
+    "id": "FireAt80_80ThenFiveCiviliansAt80_75_TwoDozersOneHelicopter_WorkerReport",
     "preset": {
-      "name": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersOneHelicopter_WorkerReport",
+      "name": "FireAt80_80ThenFiveCiviliansAt80_75_TwoDozersOneHelicopter_WorkerReport",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -614,19 +614,19 @@
           "action": "start_fire",
           "x": 80,
           "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 14,
           "action": "spawn_civilians_5",
           "x": 80,
-          "y": 65,
-          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         }
       ]
     },
     "design": {
-      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_75",
       "information_mode": "worker_report",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -649,9 +649,9 @@
     }
   },
   {
-    "id": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersOneHelicopter_OrganizerDirect",
+    "id": "FireAt80_80ThenFiveCiviliansAt80_75_TwoDozersOneHelicopter_OrganizerDirect",
     "preset": {
-      "name": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersOneHelicopter_OrganizerDirect",
+      "name": "FireAt80_80ThenFiveCiviliansAt80_75_TwoDozersOneHelicopter_OrganizerDirect",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -673,19 +673,19 @@
           "action": "start_fire",
           "x": 80,
           "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 14,
           "action": "spawn_civilians_5",
           "x": 80,
-          "y": 65,
-          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         }
       ]
     },
     "design": {
-      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_75",
       "information_mode": "organizer_direct",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -708,9 +708,9 @@
     }
   },
   {
-    "id": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerTwoHelicopters_WorkerReport",
+    "id": "FireAt80_80ThenFiveCiviliansAt80_75_OneDozerTwoHelicopters_WorkerReport",
     "preset": {
-      "name": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerTwoHelicopters_WorkerReport",
+      "name": "FireAt80_80ThenFiveCiviliansAt80_75_OneDozerTwoHelicopters_WorkerReport",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -732,19 +732,19 @@
           "action": "start_fire",
           "x": 80,
           "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 14,
           "action": "spawn_civilians_5",
           "x": 80,
-          "y": 65,
-          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         }
       ]
     },
     "design": {
-      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_75",
       "information_mode": "worker_report",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -767,9 +767,9 @@
     }
   },
   {
-    "id": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerTwoHelicopters_OrganizerDirect",
+    "id": "FireAt80_80ThenFiveCiviliansAt80_75_OneDozerTwoHelicopters_OrganizerDirect",
     "preset": {
-      "name": "FireAt80_80ThenFiveCiviliansAt80_65_OneDozerTwoHelicopters_OrganizerDirect",
+      "name": "FireAt80_80ThenFiveCiviliansAt80_75_OneDozerTwoHelicopters_OrganizerDirect",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -791,19 +791,19 @@
           "action": "start_fire",
           "x": 80,
           "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 14,
           "action": "spawn_civilians_5",
           "x": 80,
-          "y": 65,
-          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         }
       ]
     },
     "design": {
-      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_75",
       "information_mode": "organizer_direct",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -826,9 +826,9 @@
     }
   },
   {
-    "id": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersTwoHelicopters_WorkerReport",
+    "id": "FireAt80_80ThenFiveCiviliansAt80_75_TwoDozersTwoHelicopters_WorkerReport",
     "preset": {
-      "name": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersTwoHelicopters_WorkerReport",
+      "name": "FireAt80_80ThenFiveCiviliansAt80_75_TwoDozersTwoHelicopters_WorkerReport",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -850,19 +850,19 @@
           "action": "start_fire",
           "x": 80,
           "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 14,
           "action": "spawn_civilians_5",
           "x": 80,
-          "y": 65,
-          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         }
       ]
     },
     "design": {
-      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_75",
       "information_mode": "worker_report",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -885,9 +885,9 @@
     }
   },
   {
-    "id": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersTwoHelicopters_OrganizerDirect",
+    "id": "FireAt80_80ThenFiveCiviliansAt80_75_TwoDozersTwoHelicopters_OrganizerDirect",
     "preset": {
-      "name": "FireAt80_80ThenFiveCiviliansAt80_65_TwoDozersTwoHelicopters_OrganizerDirect",
+      "name": "FireAt80_80ThenFiveCiviliansAt80_75_TwoDozersTwoHelicopters_OrganizerDirect",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -909,19 +909,19 @@
           "action": "start_fire",
           "x": 80,
           "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 14,
           "action": "spawn_civilians_5",
           "x": 80,
-          "y": 65,
-          "announcement": "Five civilians reported near (80,65). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         }
       ]
     },
     "design": {
-      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_65",
+      "event_sequence": "FireAt80_80ThenFiveCiviliansAt80_75",
       "information_mode": "organizer_direct",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -944,9 +944,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerOneHelicopter_WorkerReport",
+    "id": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_OneDozerOneHelicopter_WorkerReport",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerOneHelicopter_WorkerReport",
+      "name": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_OneDozerOneHelicopter_WorkerReport",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -966,28 +966,28 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 22,
           "action": "start_fire",
           "x": 80,
-          "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "y": 20,
+          "announcement": "A fire reported near (80,20)."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "event_sequence": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20",
       "information_mode": "worker_report",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -1010,9 +1010,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerOneHelicopter_OrganizerDirect",
+    "id": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_OneDozerOneHelicopter_OrganizerDirect",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerOneHelicopter_OrganizerDirect",
+      "name": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_OneDozerOneHelicopter_OrganizerDirect",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -1032,28 +1032,28 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 22,
           "action": "start_fire",
           "x": 80,
-          "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "y": 20,
+          "announcement": "A fire reported near (80,20)."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "event_sequence": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20",
       "information_mode": "organizer_direct",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -1076,9 +1076,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersOneHelicopter_WorkerReport",
+    "id": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_TwoDozersOneHelicopter_WorkerReport",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersOneHelicopter_WorkerReport",
+      "name": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_TwoDozersOneHelicopter_WorkerReport",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -1098,28 +1098,28 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 22,
           "action": "start_fire",
           "x": 80,
-          "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "y": 20,
+          "announcement": "A fire reported near (80,20)."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "event_sequence": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20",
       "information_mode": "worker_report",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -1142,9 +1142,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersOneHelicopter_OrganizerDirect",
+    "id": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_TwoDozersOneHelicopter_OrganizerDirect",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersOneHelicopter_OrganizerDirect",
+      "name": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_TwoDozersOneHelicopter_OrganizerDirect",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -1164,28 +1164,28 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 22,
           "action": "start_fire",
           "x": 80,
-          "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "y": 20,
+          "announcement": "A fire reported near (80,20)."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "event_sequence": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20",
       "information_mode": "organizer_direct",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -1208,9 +1208,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerTwoHelicopters_WorkerReport",
+    "id": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_OneDozerTwoHelicopters_WorkerReport",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerTwoHelicopters_WorkerReport",
+      "name": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_OneDozerTwoHelicopters_WorkerReport",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -1230,28 +1230,28 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 22,
           "action": "start_fire",
           "x": 80,
-          "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "y": 20,
+          "announcement": "A fire reported near (80,20)."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "event_sequence": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20",
       "information_mode": "worker_report",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -1274,9 +1274,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerTwoHelicopters_OrganizerDirect",
+    "id": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_OneDozerTwoHelicopters_OrganizerDirect",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_OneDozerTwoHelicopters_OrganizerDirect",
+      "name": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_OneDozerTwoHelicopters_OrganizerDirect",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -1296,28 +1296,28 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 22,
           "action": "start_fire",
           "x": 80,
-          "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "y": 20,
+          "announcement": "A fire reported near (80,20)."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "event_sequence": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20",
       "information_mode": "organizer_direct",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -1340,9 +1340,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersTwoHelicopters_WorkerReport",
+    "id": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_TwoDozersTwoHelicopters_WorkerReport",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersTwoHelicopters_WorkerReport",
+      "name": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_TwoDozersTwoHelicopters_WorkerReport",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -1362,28 +1362,28 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 22,
           "action": "start_fire",
           "x": 80,
-          "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "y": 20,
+          "announcement": "A fire reported near (80,20)."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "event_sequence": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20",
       "information_mode": "worker_report",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",
@@ -1406,9 +1406,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersTwoHelicopters_OrganizerDirect",
+    "id": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_TwoDozersTwoHelicopters_OrganizerDirect",
     "preset": {
-      "name": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80_TwoDozersTwoHelicopters_OrganizerDirect",
+      "name": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20_TwoDozersTwoHelicopters_OrganizerDirect",
       "description": "Contain the original and newly reported fires; rescue the initial five civilians and any new civilians. Where a new fire threatens the rescue area, coordinate scouts, firefighters, the helicopter and the bulldozer if trees obstruct a safe approach.",
       "game_type": 5,
       "map_size": 100,
@@ -1428,28 +1428,28 @@
         {
           "timestep": 8,
           "action": "spawn_civilians_5",
-          "x": 20,
-          "y": 80,
-          "announcement": "Five civilians reported near (20,80)."
+          "x": 80,
+          "y": 75,
+          "announcement": "Five civilians reported near (80,75). This is close to the new fire area. Check safe access and coordinate firefighter transport and tree clearing if useful."
         },
         {
           "timestep": 14,
           "action": "start_fire",
-          "x": 20,
-          "y": 65,
-          "announcement": "A fire reported near (20,65). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
+          "x": 80,
+          "y": 80,
+          "announcement": "A fire reported near (80,80). This is close to the new rescue area. Check fire spread, clear threatening trees if useful, and coordinate transport of firefighters."
         },
         {
           "timestep": 22,
           "action": "start_fire",
           "x": 80,
-          "y": 80,
-          "announcement": "A fire reported near (80,80)."
+          "y": 20,
+          "announcement": "A fire reported near (80,20)."
         }
       ]
     },
     "design": {
-      "event_sequence": "FiveCiviliansAt20_80ThenFiresAt20_65And80_80",
+      "event_sequence": "FiveCiviliansAt80_75ThenFiresAt80_80And80_20",
       "information_mode": "organizer_direct",
       "group_sources": {
         "original_fire": "bulldozer and firefighters",

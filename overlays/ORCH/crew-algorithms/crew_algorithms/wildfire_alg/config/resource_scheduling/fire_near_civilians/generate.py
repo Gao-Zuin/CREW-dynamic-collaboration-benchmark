@@ -3,13 +3,13 @@ import json
 from pathlib import Path
 
 SEQUENCES = {
-    'FiveCiviliansAt20_80ThenFireAt20_65': [
-        (8, 'spawn_civilians_5', 20, 80), (14, 'start_fire', 20, 65)],
-    'FireAt80_80ThenFiveCiviliansAt80_65': [
-        (8, 'start_fire', 80, 80), (14, 'spawn_civilians_5', 80, 65)],
-    'FiveCiviliansAt20_80ThenFiresAt20_65And80_80': [
-        (8, 'spawn_civilians_5', 20, 80),
-        (14, 'start_fire', 20, 65), (22, 'start_fire', 80, 80)],
+    'FiveCiviliansAt80_75ThenFireAt80_80': [
+        (8, 'spawn_civilians_5', 80, 75), (14, 'start_fire', 80, 80)],
+    'FireAt80_80ThenFiveCiviliansAt80_75': [
+        (8, 'start_fire', 80, 80), (14, 'spawn_civilians_5', 80, 75)],
+    'FiveCiviliansAt80_75ThenFiresAt80_80And80_20': [
+        (8, 'spawn_civilians_5', 80, 75),
+        (14, 'start_fire', 80, 80), (22, 'start_fire', 80, 20)],
 }
 CAPACITIES = ((1, 1, 'OneDozerOneHelicopter'),
               (2, 1, 'TwoDozersOneHelicopter'),
@@ -29,10 +29,10 @@ def generate():
                 for step, action, x, y in events:
                     count = 'Five civilians' if action == 'spawn_civilians_5' else 'A fire'
                     report = f'{count} reported near ({x},{y}).'
-                    if action == 'start_fire' and (x, y) == (20, 65):
+                    if action == 'start_fire' and (x, y) == (80, 80):
                         report += (' This is close to the new rescue area. Check fire spread, '
                                    'clear threatening trees if useful, and coordinate transport of firefighters.')
-                    elif action == 'spawn_civilians_5' and (x, y) == (80, 65):
+                    elif action == 'spawn_civilians_5' and (x, y) == (80, 75):
                         report += (' This is close to the new fire area. Check safe access and '
                                    'coordinate firefighter transport and tree clearing if useful.')
                     announcements.append({'timestep': step, 'action': action,
