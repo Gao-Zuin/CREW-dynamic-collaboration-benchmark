@@ -1,8 +1,8 @@
 [
   {
-    "id": "SecondFireAt80_80_OneDrone_LocalAlert",
+    "id": "SecondFireAt80_80_OneDrone_WorkerReport",
     "preset": {
-      "name": "SecondFireAt80_80_OneDrone_LocalAlert",
+      "name": "SecondFireAt80_80_OneDrone_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -30,7 +30,7 @@
     },
     "design": {
       "event_sequence": "SecondFireAt80_80",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -44,9 +44,9 @@
     }
   },
   {
-    "id": "SecondFireAt80_80_OneDrone_PublicLocation",
+    "id": "SecondFireAt80_80_OneDrone_OrganizerDirect",
     "preset": {
-      "name": "SecondFireAt80_80_OneDrone_PublicLocation",
+      "name": "SecondFireAt80_80_OneDrone_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -74,7 +74,7 @@
     },
     "design": {
       "event_sequence": "SecondFireAt80_80",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -88,9 +88,9 @@
     }
   },
   {
-    "id": "SecondFireAt80_80_TwoDrones_LocalAlert",
+    "id": "SecondFireAt80_80_TwoDrones_WorkerReport",
     "preset": {
-      "name": "SecondFireAt80_80_TwoDrones_LocalAlert",
+      "name": "SecondFireAt80_80_TwoDrones_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -118,7 +118,7 @@
     },
     "design": {
       "event_sequence": "SecondFireAt80_80",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -132,9 +132,9 @@
     }
   },
   {
-    "id": "SecondFireAt80_80_TwoDrones_PublicLocation",
+    "id": "SecondFireAt80_80_TwoDrones_OrganizerDirect",
     "preset": {
-      "name": "SecondFireAt80_80_TwoDrones_PublicLocation",
+      "name": "SecondFireAt80_80_TwoDrones_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -162,7 +162,7 @@
     },
     "design": {
       "event_sequence": "SecondFireAt80_80",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -176,9 +176,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80_OneDrone_LocalAlert",
+    "id": "FiveCiviliansAt20_80_OneDrone_WorkerReport",
     "preset": {
-      "name": "FiveCiviliansAt20_80_OneDrone_LocalAlert",
+      "name": "FiveCiviliansAt20_80_OneDrone_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -206,7 +206,7 @@
     },
     "design": {
       "event_sequence": "FiveCiviliansAt20_80",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -220,9 +220,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80_OneDrone_PublicLocation",
+    "id": "FiveCiviliansAt20_80_OneDrone_OrganizerDirect",
     "preset": {
-      "name": "FiveCiviliansAt20_80_OneDrone_PublicLocation",
+      "name": "FiveCiviliansAt20_80_OneDrone_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -250,7 +250,7 @@
     },
     "design": {
       "event_sequence": "FiveCiviliansAt20_80",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -264,9 +264,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80_TwoDrones_LocalAlert",
+    "id": "FiveCiviliansAt20_80_TwoDrones_WorkerReport",
     "preset": {
-      "name": "FiveCiviliansAt20_80_TwoDrones_LocalAlert",
+      "name": "FiveCiviliansAt20_80_TwoDrones_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -294,7 +294,7 @@
     },
     "design": {
       "event_sequence": "FiveCiviliansAt20_80",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -308,9 +308,9 @@
     }
   },
   {
-    "id": "FiveCiviliansAt20_80_TwoDrones_PublicLocation",
+    "id": "FiveCiviliansAt20_80_TwoDrones_OrganizerDirect",
     "preset": {
-      "name": "FiveCiviliansAt20_80_TwoDrones_PublicLocation",
+      "name": "FiveCiviliansAt20_80_TwoDrones_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -338,7 +338,7 @@
     },
     "design": {
       "event_sequence": "FiveCiviliansAt20_80",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -352,9 +352,9 @@
     }
   },
   {
-    "id": "SecondFireThenFiveCivilians_OneDrone_LocalAlert",
+    "id": "SecondFireThenFiveCivilians_OneDrone_WorkerReport",
     "preset": {
-      "name": "SecondFireThenFiveCivilians_OneDrone_LocalAlert",
+      "name": "SecondFireThenFiveCivilians_OneDrone_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -389,7 +389,7 @@
     },
     "design": {
       "event_sequence": "SecondFireThenFiveCivilians",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -404,9 +404,9 @@
     }
   },
   {
-    "id": "SecondFireThenFiveCivilians_OneDrone_PublicLocation",
+    "id": "SecondFireThenFiveCivilians_OneDrone_OrganizerDirect",
     "preset": {
-      "name": "SecondFireThenFiveCivilians_OneDrone_PublicLocation",
+      "name": "SecondFireThenFiveCivilians_OneDrone_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -441,7 +441,7 @@
     },
     "design": {
       "event_sequence": "SecondFireThenFiveCivilians",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -456,9 +456,9 @@
     }
   },
   {
-    "id": "SecondFireThenFiveCivilians_TwoDrones_LocalAlert",
+    "id": "SecondFireThenFiveCivilians_TwoDrones_WorkerReport",
     "preset": {
-      "name": "SecondFireThenFiveCivilians_TwoDrones_LocalAlert",
+      "name": "SecondFireThenFiveCivilians_TwoDrones_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -493,7 +493,7 @@
     },
     "design": {
       "event_sequence": "SecondFireThenFiveCivilians",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -508,9 +508,9 @@
     }
   },
   {
-    "id": "SecondFireThenFiveCivilians_TwoDrones_PublicLocation",
+    "id": "SecondFireThenFiveCivilians_TwoDrones_OrganizerDirect",
     "preset": {
-      "name": "SecondFireThenFiveCivilians_TwoDrones_PublicLocation",
+      "name": "SecondFireThenFiveCivilians_TwoDrones_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -545,7 +545,7 @@
     },
     "design": {
       "event_sequence": "SecondFireThenFiveCivilians",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -560,9 +560,9 @@
     }
   },
   {
-    "id": "FiveCiviliansThenSecondFire_OneDrone_LocalAlert",
+    "id": "FiveCiviliansThenSecondFire_OneDrone_WorkerReport",
     "preset": {
-      "name": "FiveCiviliansThenSecondFire_OneDrone_LocalAlert",
+      "name": "FiveCiviliansThenSecondFire_OneDrone_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -597,7 +597,7 @@
     },
     "design": {
       "event_sequence": "FiveCiviliansThenSecondFire",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -612,9 +612,9 @@
     }
   },
   {
-    "id": "FiveCiviliansThenSecondFire_OneDrone_PublicLocation",
+    "id": "FiveCiviliansThenSecondFire_OneDrone_OrganizerDirect",
     "preset": {
-      "name": "FiveCiviliansThenSecondFire_OneDrone_PublicLocation",
+      "name": "FiveCiviliansThenSecondFire_OneDrone_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -649,7 +649,7 @@
     },
     "design": {
       "event_sequence": "FiveCiviliansThenSecondFire",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -664,9 +664,9 @@
     }
   },
   {
-    "id": "FiveCiviliansThenSecondFire_TwoDrones_LocalAlert",
+    "id": "FiveCiviliansThenSecondFire_TwoDrones_WorkerReport",
     "preset": {
-      "name": "FiveCiviliansThenSecondFire_TwoDrones_LocalAlert",
+      "name": "FiveCiviliansThenSecondFire_TwoDrones_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -701,7 +701,7 @@
     },
     "design": {
       "event_sequence": "FiveCiviliansThenSecondFire",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -716,9 +716,9 @@
     }
   },
   {
-    "id": "FiveCiviliansThenSecondFire_TwoDrones_PublicLocation",
+    "id": "FiveCiviliansThenSecondFire_TwoDrones_OrganizerDirect",
     "preset": {
-      "name": "FiveCiviliansThenSecondFire_TwoDrones_PublicLocation",
+      "name": "FiveCiviliansThenSecondFire_TwoDrones_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -753,7 +753,7 @@
     },
     "design": {
       "event_sequence": "FiveCiviliansThenSecondFire",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -768,9 +768,9 @@
     }
   },
   {
-    "id": "FireAt80_80ThenFireAt20_80_OneDrone_LocalAlert",
+    "id": "FireAt80_80ThenFireAt20_80_OneDrone_WorkerReport",
     "preset": {
-      "name": "FireAt80_80ThenFireAt20_80_OneDrone_LocalAlert",
+      "name": "FireAt80_80ThenFireAt20_80_OneDrone_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -805,7 +805,7 @@
     },
     "design": {
       "event_sequence": "FireAt80_80ThenFireAt20_80",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -820,9 +820,9 @@
     }
   },
   {
-    "id": "FireAt80_80ThenFireAt20_80_OneDrone_PublicLocation",
+    "id": "FireAt80_80ThenFireAt20_80_OneDrone_OrganizerDirect",
     "preset": {
-      "name": "FireAt80_80ThenFireAt20_80_OneDrone_PublicLocation",
+      "name": "FireAt80_80ThenFireAt20_80_OneDrone_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -857,7 +857,7 @@
     },
     "design": {
       "event_sequence": "FireAt80_80ThenFireAt20_80",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -872,9 +872,9 @@
     }
   },
   {
-    "id": "FireAt80_80ThenFireAt20_80_TwoDrones_LocalAlert",
+    "id": "FireAt80_80ThenFireAt20_80_TwoDrones_WorkerReport",
     "preset": {
-      "name": "FireAt80_80ThenFireAt20_80_TwoDrones_LocalAlert",
+      "name": "FireAt80_80ThenFireAt20_80_TwoDrones_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -909,7 +909,7 @@
     },
     "design": {
       "event_sequence": "FireAt80_80ThenFireAt20_80",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -924,9 +924,9 @@
     }
   },
   {
-    "id": "FireAt80_80ThenFireAt20_80_TwoDrones_PublicLocation",
+    "id": "FireAt80_80ThenFireAt20_80_TwoDrones_OrganizerDirect",
     "preset": {
-      "name": "FireAt80_80ThenFireAt20_80_TwoDrones_PublicLocation",
+      "name": "FireAt80_80ThenFireAt20_80_TwoDrones_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -961,7 +961,7 @@
     },
     "design": {
       "event_sequence": "FireAt80_80ThenFireAt20_80",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -976,9 +976,9 @@
     }
   },
   {
-    "id": "FiveCiviliansThenNearbyFire_OneDrone_LocalAlert",
+    "id": "FiveCiviliansThenNearbyFire_OneDrone_WorkerReport",
     "preset": {
-      "name": "FiveCiviliansThenNearbyFire_OneDrone_LocalAlert",
+      "name": "FiveCiviliansThenNearbyFire_OneDrone_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1013,7 +1013,7 @@
     },
     "design": {
       "event_sequence": "FiveCiviliansThenNearbyFire",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -1028,9 +1028,9 @@
     }
   },
   {
-    "id": "FiveCiviliansThenNearbyFire_OneDrone_PublicLocation",
+    "id": "FiveCiviliansThenNearbyFire_OneDrone_OrganizerDirect",
     "preset": {
-      "name": "FiveCiviliansThenNearbyFire_OneDrone_PublicLocation",
+      "name": "FiveCiviliansThenNearbyFire_OneDrone_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1065,7 +1065,7 @@
     },
     "design": {
       "event_sequence": "FiveCiviliansThenNearbyFire",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -1080,9 +1080,9 @@
     }
   },
   {
-    "id": "FiveCiviliansThenNearbyFire_TwoDrones_LocalAlert",
+    "id": "FiveCiviliansThenNearbyFire_TwoDrones_WorkerReport",
     "preset": {
-      "name": "FiveCiviliansThenNearbyFire_TwoDrones_LocalAlert",
+      "name": "FiveCiviliansThenNearbyFire_TwoDrones_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1117,7 +1117,7 @@
     },
     "design": {
       "event_sequence": "FiveCiviliansThenNearbyFire",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -1132,9 +1132,9 @@
     }
   },
   {
-    "id": "FiveCiviliansThenNearbyFire_TwoDrones_PublicLocation",
+    "id": "FiveCiviliansThenNearbyFire_TwoDrones_OrganizerDirect",
     "preset": {
-      "name": "FiveCiviliansThenNearbyFire_TwoDrones_PublicLocation",
+      "name": "FiveCiviliansThenNearbyFire_TwoDrones_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1169,7 +1169,7 @@
     },
     "design": {
       "event_sequence": "FiveCiviliansThenNearbyFire",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -1184,9 +1184,9 @@
     }
   },
   {
-    "id": "OneCivilianAt80_20_OneDrone_LocalAlert",
+    "id": "OneCivilianAt80_20_OneDrone_WorkerReport",
     "preset": {
-      "name": "OneCivilianAt80_20_OneDrone_LocalAlert",
+      "name": "OneCivilianAt80_20_OneDrone_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1214,7 +1214,7 @@
     },
     "design": {
       "event_sequence": "OneCivilianAt80_20",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -1228,9 +1228,9 @@
     }
   },
   {
-    "id": "OneCivilianAt80_20_OneDrone_PublicLocation",
+    "id": "OneCivilianAt80_20_OneDrone_OrganizerDirect",
     "preset": {
-      "name": "OneCivilianAt80_20_OneDrone_PublicLocation",
+      "name": "OneCivilianAt80_20_OneDrone_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1258,7 +1258,7 @@
     },
     "design": {
       "event_sequence": "OneCivilianAt80_20",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -1272,9 +1272,9 @@
     }
   },
   {
-    "id": "OneCivilianAt80_20_TwoDrones_LocalAlert",
+    "id": "OneCivilianAt80_20_TwoDrones_WorkerReport",
     "preset": {
-      "name": "OneCivilianAt80_20_TwoDrones_LocalAlert",
+      "name": "OneCivilianAt80_20_TwoDrones_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1302,7 +1302,7 @@
     },
     "design": {
       "event_sequence": "OneCivilianAt80_20",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -1316,9 +1316,9 @@
     }
   },
   {
-    "id": "OneCivilianAt80_20_TwoDrones_PublicLocation",
+    "id": "OneCivilianAt80_20_TwoDrones_OrganizerDirect",
     "preset": {
-      "name": "OneCivilianAt80_20_TwoDrones_PublicLocation",
+      "name": "OneCivilianAt80_20_TwoDrones_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1346,7 +1346,7 @@
     },
     "design": {
       "event_sequence": "OneCivilianAt80_20",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -1360,9 +1360,9 @@
     }
   },
   {
-    "id": "LateFireAt80_80_OneDrone_LocalAlert",
+    "id": "LateFireAt80_80_OneDrone_WorkerReport",
     "preset": {
-      "name": "LateFireAt80_80_OneDrone_LocalAlert",
+      "name": "LateFireAt80_80_OneDrone_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1390,7 +1390,7 @@
     },
     "design": {
       "event_sequence": "LateFireAt80_80",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -1404,9 +1404,9 @@
     }
   },
   {
-    "id": "LateFireAt80_80_OneDrone_PublicLocation",
+    "id": "LateFireAt80_80_OneDrone_OrganizerDirect",
     "preset": {
-      "name": "LateFireAt80_80_OneDrone_PublicLocation",
+      "name": "LateFireAt80_80_OneDrone_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1434,7 +1434,7 @@
     },
     "design": {
       "event_sequence": "LateFireAt80_80",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -1448,9 +1448,9 @@
     }
   },
   {
-    "id": "LateFireAt80_80_TwoDrones_LocalAlert",
+    "id": "LateFireAt80_80_TwoDrones_WorkerReport",
     "preset": {
-      "name": "LateFireAt80_80_TwoDrones_LocalAlert",
+      "name": "LateFireAt80_80_TwoDrones_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1478,7 +1478,7 @@
     },
     "design": {
       "event_sequence": "LateFireAt80_80",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -1492,9 +1492,9 @@
     }
   },
   {
-    "id": "LateFireAt80_80_TwoDrones_PublicLocation",
+    "id": "LateFireAt80_80_TwoDrones_OrganizerDirect",
     "preset": {
-      "name": "LateFireAt80_80_TwoDrones_PublicLocation",
+      "name": "LateFireAt80_80_TwoDrones_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1522,7 +1522,7 @@
     },
     "design": {
       "event_sequence": "LateFireAt80_80",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -1536,9 +1536,9 @@
     }
   },
   {
-    "id": "SecondFireThenOneCivilian_OneDrone_LocalAlert",
+    "id": "SecondFireThenOneCivilian_OneDrone_WorkerReport",
     "preset": {
-      "name": "SecondFireThenOneCivilian_OneDrone_LocalAlert",
+      "name": "SecondFireThenOneCivilian_OneDrone_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1573,7 +1573,7 @@
     },
     "design": {
       "event_sequence": "SecondFireThenOneCivilian",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -1588,9 +1588,9 @@
     }
   },
   {
-    "id": "SecondFireThenOneCivilian_OneDrone_PublicLocation",
+    "id": "SecondFireThenOneCivilian_OneDrone_OrganizerDirect",
     "preset": {
-      "name": "SecondFireThenOneCivilian_OneDrone_PublicLocation",
+      "name": "SecondFireThenOneCivilian_OneDrone_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1625,7 +1625,7 @@
     },
     "design": {
       "event_sequence": "SecondFireThenOneCivilian",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -1640,9 +1640,9 @@
     }
   },
   {
-    "id": "SecondFireThenOneCivilian_TwoDrones_LocalAlert",
+    "id": "SecondFireThenOneCivilian_TwoDrones_WorkerReport",
     "preset": {
-      "name": "SecondFireThenOneCivilian_TwoDrones_LocalAlert",
+      "name": "SecondFireThenOneCivilian_TwoDrones_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1677,7 +1677,7 @@
     },
     "design": {
       "event_sequence": "SecondFireThenOneCivilian",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -1692,9 +1692,9 @@
     }
   },
   {
-    "id": "SecondFireThenOneCivilian_TwoDrones_PublicLocation",
+    "id": "SecondFireThenOneCivilian_TwoDrones_OrganizerDirect",
     "preset": {
-      "name": "SecondFireThenOneCivilian_TwoDrones_PublicLocation",
+      "name": "SecondFireThenOneCivilian_TwoDrones_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1729,7 +1729,7 @@
     },
     "design": {
       "event_sequence": "SecondFireThenOneCivilian",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -1744,9 +1744,9 @@
     }
   },
   {
-    "id": "OneCivilianThenTwoFires_OneDrone_LocalAlert",
+    "id": "OneCivilianThenTwoFires_OneDrone_WorkerReport",
     "preset": {
-      "name": "OneCivilianThenTwoFires_OneDrone_LocalAlert",
+      "name": "OneCivilianThenTwoFires_OneDrone_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1788,7 +1788,7 @@
     },
     "design": {
       "event_sequence": "OneCivilianThenTwoFires",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -1804,9 +1804,9 @@
     }
   },
   {
-    "id": "OneCivilianThenTwoFires_OneDrone_PublicLocation",
+    "id": "OneCivilianThenTwoFires_OneDrone_OrganizerDirect",
     "preset": {
-      "name": "OneCivilianThenTwoFires_OneDrone_PublicLocation",
+      "name": "OneCivilianThenTwoFires_OneDrone_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1848,7 +1848,7 @@
     },
     "design": {
       "event_sequence": "OneCivilianThenTwoFires",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 1,
       "initial_goals": [
         "contain original fire",
@@ -1864,9 +1864,9 @@
     }
   },
   {
-    "id": "OneCivilianThenTwoFires_TwoDrones_LocalAlert",
+    "id": "OneCivilianThenTwoFires_TwoDrones_WorkerReport",
     "preset": {
-      "name": "OneCivilianThenTwoFires_TwoDrones_LocalAlert",
+      "name": "OneCivilianThenTwoFires_TwoDrones_WorkerReport",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1908,7 +1908,7 @@
     },
     "design": {
       "event_sequence": "OneCivilianThenTwoFires",
-      "information_mode": "local_alert",
+      "information_mode": "worker_report",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",
@@ -1924,9 +1924,9 @@
     }
   },
   {
-    "id": "OneCivilianThenTwoFires_TwoDrones_PublicLocation",
+    "id": "OneCivilianThenTwoFires_TwoDrones_OrganizerDirect",
     "preset": {
-      "name": "OneCivilianThenTwoFires_TwoDrones_PublicLocation",
+      "name": "OneCivilianThenTwoFires_TwoDrones_OrganizerDirect",
       "description": "Contain the original fire and rescue the initial five civilians. Respond to later fire or civilian reports while continuing unfinished work.",
       "game_type": 5,
       "map_size": 100,
@@ -1968,7 +1968,7 @@
     },
     "design": {
       "event_sequence": "OneCivilianThenTwoFires",
-      "information_mode": "public_location",
+      "information_mode": "organizer_direct",
       "drone_count": 2,
       "initial_goals": [
         "contain original fire",

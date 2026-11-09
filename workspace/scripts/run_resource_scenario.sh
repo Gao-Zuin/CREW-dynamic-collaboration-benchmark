@@ -20,8 +20,8 @@ print(matches[0]['design']['information_mode'])
 PY
 )"
 case "$MODE" in
-  local_alert) export CREW_HT_LOCAL_EVENT_INFO=1 ;;
-  public_location|none) export CREW_HT_LOCAL_EVENT_INFO=0 ;;
+  worker_report) export CREW_HT_WORKER_EVENT_REPORT=1; export CREW_HT_LOCAL_EVENT_INFO=0 ;;
+  organizer_direct|none) export CREW_HT_WORKER_EVENT_REPORT=0; export CREW_HT_LOCAL_EVENT_INFO=0 ;;
   *) echo "Unsupported information mode: $MODE" >&2; exit 2 ;;
 esac
 export CREW_RESOURCE_SCHEDULING_FAMILY=scenarios

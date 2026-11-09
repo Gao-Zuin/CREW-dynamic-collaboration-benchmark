@@ -45,9 +45,9 @@
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/composite_matrix.json": "238dec3e2884fcc0920820ddc0347f8cb81230b60155df6213949611678ad3f5",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/focused_tasks.json": "c2da7222a464fab3c77a3cd71d99d3739c55fc0b0fc7fb305c5d1fa76539cc39",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/initial_structure.py": "9959fb9d0a669d66833905f2c4166a18b1c5a53467aa96b62c13c177047a831a",
-    "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/scenarios/README.zh-CN.md": "e880c430c1b10b8e2a9aca3c90e853c1c675b3b5967b17e09bae5582d937d607",
-    "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/scenarios/generate.py": "7c9d5ed2c0e2ad0bdb5e9e85142a7e1e00e77e986148889b50fb85e72b3602a7",
-    "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/scenarios/tasks.json": "90494c29dfa42fcbf65dec307340c24968781492c4c1d7bf0d8ff408bf283ccd",
+    "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/scenarios/README.zh-CN.md": "28596978ce34d50fbe4de7104b550ff9f6023cf71396203860060179355f330a",
+    "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/scenarios/generate.py": "27473fb4060ba54173f9764b7e061366e6eced9e1ac7a19d933a664efc857a35",
+    "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/scenarios/tasks.json": "94eb46648770417ca4e89f1816570f056f8b0a4d435bf6c26ffa5cc3592b6552",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/structure_matrix.json": "e1ae2f6cb2ab01ee04b5d8bb647ed717cd834e8970f993fcc49e3618a83a186e",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/structure_metrics.py": "d0818bc887015818effc698a0bdbc28a267d9653be18252dfddad5a6e3f60fe3",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/tasks.json": "d8bccc1729f90b4fe0fc12c60e0be51bdc341a3776fd09809ed04209cbf1105b",
@@ -62,7 +62,7 @@
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/coordination/soft_task_policy.py": "be0c58dec6d9e9684072e67648a5e8220cb2ebc1b7b0c85b0861d8021414aa73",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/coordination/task_communication.py": "5152aa506f971d3dbb88b44e335ec77c288caaff9959d30fd821e8042808462e",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/coordination/task_guidance.py": "e68d294a17027fa56bb5712c78e7627bc3e4a7c3765c17ec761e963eadc8001b",
-    "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/coordination/task_runtime.py": "63003b24428c8a63e52cde5c668b4adb678de376eed0b344b21e43704651e2a0",
+    "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/coordination/task_runtime.py": "2a064a94f7088771957feef46a566a5d3374d8a398103d9f5e9b979e5dc7da28",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/core/alg_utils.py": "85bbca76332e686ad9d57a1ebc5425b854b305876a3e86861c66473821a5b220",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/core/gpt.py": "48cae3709e12c6bdcb72e0012053a22b055625c6a085f1a1234befe2acd129a2",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/core/token_guard.py": "768f250edfb61cff52e9cf2b3fb5c4c02ac29e23e6089ebb0170d7e289d9b696",
@@ -288,7 +288,7 @@
     "workspace/scripts/run_diverse_communication_benchmark.sh": "a841d0ca39ca3d8853acb295ceebe04bcc60ebb4afc83a0d1361b789a9138a38",
     "workspace/scripts/run_hypergraph_gate.py": "f2c30cead1a2bfe933a4068702d4985573d164f2da4dbff6e835d18d85f981d5",
     "workspace/scripts/run_noop_rootless.sh": "9af6c6afc23ab52e62c985e292fef59d6b6dcc0490803e44041e385c8e1db212",
-    "workspace/scripts/run_resource_scenario.sh": "13662149f0e79e3c53cb8813ed8e61dd77f5aa1a7dbdfa5a41062dc1a3c6fd11",
+    "workspace/scripts/run_resource_scenario.sh": "f8f057935ce610f178daa0caad55cfaeda1067ed122440770ae2d6e87607e06f",
     "workspace/scripts/run_small_communication_benchmark.sh": "6e1c2ffd17fadbce7bb2317682a8e4c4f43243ff8b7f44f71d20c762f775e757",
     "workspace/scripts/run_structure_matrix_case.sh": "8b175ac6c81f0185b6cbde5dc815d9214f44de8d7bd8fe9fc5b88896cc241837",
     "workspace/scripts/run_task_hypergraph.sh": "6b7d19b016b20125f5e8db352cd18b9f85a44211c9833f932ca3dc929c2d7e90",
@@ -318,7 +318,7 @@
     "workspace/tests/test_message_chain_analysis.py": "6a23d17b747c277d4a6b1c78dd98ee5e4a22d59be00e0d1c4123d87f234fa91b",
     "workspace/tests/test_official_phase_transitions.py": "94fc3847c5ebba6d23fd25840cf0a474654f1d7dc5e180102c0e44fabb90c536",
     "workspace/tests/test_physical_gate_parser.py": "ca23247a052082906e977bed55168c57f896908c8824c2f8532e901b72dd961d",
-    "workspace/tests/test_resource_scheduling_entry.py": "9451a3503e3a2c5acaecfe6fe04251f915ee4ee46e5a85e564c48bea7c5fa61c",
+    "workspace/tests/test_resource_scheduling_entry.py": "0d95e850ff9f74987be2da1df0b80f213cdcfebfe34e2a87d828f78df89eefe0",
     "workspace/tests/test_responsibility_events.py": "d7a0271730de3d95e9566122451961b06722e8c43ae997f91a889de48b58b979",
     "workspace/tests/test_responsibility_ledger_ab.py": "724bfff9ef1dee821a941c38793361c2834c98a8a320d0e8235d2f2818a0f401",
     "workspace/tests/test_round_delivery.py": "ce0fa6b770d3b25a0d4679b49afcba94be3ddcb4f5e942cda29d8b266d176c42",
@@ -334,6 +334,7 @@
     "workspace/tests/test_task_revision.py": "5e15adb5bb3b48419bd577fafd3ea21bd69dd4d9bae923b4f417864f6fccde73",
     "workspace/tests/test_task_runtime.py": "16c3d2e4cdb683a6e016422e50903862c25df770dea56ac80cb30248021c44d6",
     "workspace/tests/test_typed_chat_channels.py": "25cc89b3601971eb91b1e5c78c7fa2956e9923f0c7eec4bfc1db4e58d1151cd4",
-    "workspace/tests/test_unity_spray_visual.py": "09ac3193e0fae40158e93d64c5bbcba5a72b1fb6610159ef6f829d1843206765"
+    "workspace/tests/test_unity_spray_visual.py": "09ac3193e0fae40158e93d64c5bbcba5a72b1fb6610159ef6f829d1843206765",
+    "workspace/tests/test_worker_event_report.py": "341e513f58d5a33a6878b9c67d6a61214b06eaf20708cf34610e4956973645ce"
   }
 }

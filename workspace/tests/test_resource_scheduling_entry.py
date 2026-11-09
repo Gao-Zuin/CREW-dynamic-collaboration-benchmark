@@ -35,9 +35,9 @@ class SchedulingEntryTests(unittest.TestCase):
     def test_concrete_scenarios_load_into_standard_runner(self):
         with patch.dict(os.environ, {'CREW_RESOURCE_SCHEDULING_FAMILY': 'scenarios'}):
             levels = create_level_presets()
-        self.assertEqual(len([name for name in levels if name.endswith(('_LocalAlert', '_PublicLocation'))
+        self.assertEqual(len([name for name in levels if name.endswith(('_WorkerReport', '_OrganizerDirect'))
                               or name.startswith('OriginalFireAndFiveCivilians_')]), 42)
-        name = 'OneCivilianThenTwoFires_OneDrone_LocalAlert'
+        name = 'OneCivilianThenTwoFires_OneDrone_WorkerReport'
         cfg = {}
         update_config(levels[name], 42, cfg)
         self.assertEqual(cfg['game_type'], 5)

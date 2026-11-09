@@ -22,6 +22,9 @@ class TaskRuntimeBridge(RuntimeBridge):
         super().__init__(cfg, path, "HT")
         self.fixed_groups = os.getenv("CREW_HT_FIXED_GROUPS") == "1"
         self.local_event_info = os.getenv("CREW_HT_LOCAL_EVENT_INFO") == "1"
+        self.worker_event_report = os.getenv("CREW_HT_WORKER_EVENT_REPORT") == "1"
+        if self.local_event_info and self.worker_event_report:
+            raise ValueError("local proximity cues and worker-first event reports are separate conditions")
         self.local_event_radius = float(os.getenv("CREW_HT_LOCAL_EVENT_RADIUS", "10"))
         if self.local_event_radius <= 0:
             raise ValueError("CREW_HT_LOCAL_EVENT_RADIUS must be positive")
@@ -64,6 +67,7 @@ class TaskRuntimeBridge(RuntimeBridge):
                      "organizer_input": "initial mission, roster, official environment event notices, leader reports",
                      "fixed_groups": self.fixed_groups,
                      "local_event_info": self.local_event_info,
+                     "worker_event_report": self.worker_event_report,
                      "local_event_radius": self.local_event_radius,
                      "structural_initial_plan": self.structural_initial_plan,
                      "round_delivery": self.round_delivery,
@@ -250,10 +254,12 @@ class TaskRuntimeBridge(RuntimeBridge):
         original = original.split("You may send messages to individual agents or in a global channel.")[0]
         agent = self.runtime_agents.get(str(agent_id))
         notices = [m for m in agent.chat_history.get("ENVIRONMENT", [])
-                   if m[0] in {"PUBLIC_ANNOUNCEMENT", "CENTRAL_EVENT_NOTICE", "LOCAL_EVENT_CUE"}] if agent else []
+                   if m[0] in {"PUBLIC_ANNOUNCEMENT", "CENTRAL_EVENT_NOTICE", "LOCAL_EVENT_CUE",
+                               "WORKER_EVENT_REPORT"}] if agent else []
         if notices:
             central = any(m[0] == "CENTRAL_EVENT_NOTICE" for m in notices)
             local_cue = any(m[0] == "LOCAL_EVENT_CUE" for m in notices)
+            worker_report = any(m[0] == "WORKER_EVENT_REPORT" for m in notices)
             original = (("[RECENT CENTRAL NOTICES — assess before the old group suggestion]\n" if central else
                          "[RECENT PUBLIC NOTICES — assess before the old group suggestion]\n") +
                         json.dumps(notices, ensure_ascii=False) + "\n"
@@ -262,13 +268,20 @@ class TaskRuntimeBridge(RuntimeBridge):
                         "relevant implications to their leader: reporting new work outside the old group "
                         "goal is allowed even if you are not a leader. A REPORT to your leader is not "
                         "escalation to the center. Leaders should decide whether local work, "
-                        "another leader, or the organizer can cover them. A notice is public information, "
-                        "not proof you have observed the target. Escalation is optional; do not forget "
-                        "ongoing deliveries.\n\n" + original)
+                        "another leader, or the organizer can cover them. " +
+                        ("Your WORKER_EVENT_REPORT is private until reported; " if worker_report else
+                         "A notice is public information; ") +
+                        "it is not proof you have observed the target. Do not forget ongoing deliveries.\n\n" + original)
             if local_cue:
                 original = ("A LOCAL_EVENT_CUE gives only you a proximity-based reported location. "
                             "The organizer did not receive its coordinates. Report useful findings "
                             "through your group; verify active fire independently.\n" + original)
+            if worker_report:
+                original = ("A WORKER_EVENT_REPORT was sent to you alone. The organizer did not "
+                            "receive this event notice. Report its location and source through "
+                            "your group now: nonleaders use REPORT to their leader; leaders use "
+                            "ORGANIZER to inform the center, even if they can handle the work "
+                            "locally. An official report is not proof the target remains there.\n" + original)
             if central and not self.local_event_info:
                 original = ("The center already received these official event notices directly. "
                             "You need not discover or relay them to make the center aware. "
@@ -372,7 +385,9 @@ class TaskRuntimeBridge(RuntimeBridge):
         submitted = global_data.get("submitted_events", [])
         for event in submitted:
             if event.get("timestep") == self.step:
-                if self.local_event_info and event.get("action") in ("start_fire", "spawn_civilian", "spawn_civilians_5"):
+                if self.worker_event_report and event.get("action") in ("start_fire", "spawn_civilian", "spawn_civilians_5"):
+                    self._deliver_worker_event_report(event)
+                elif self.local_event_info and event.get("action") in ("start_fire", "spawn_civilian", "spawn_civilians_5"):
                     fire = event["action"] == "start_fire"
                     notice = {"timestep": event["timestep"],
                               "action": "fire_alert" if fire else "civilian_alert",
@@ -394,6 +409,36 @@ class TaskRuntimeBridge(RuntimeBridge):
                 self.local_event_candidates.append(dict(event))
         self._deliver_local_event_cues(self.local_event_candidates)
         self._record_source_view_fire_sightings()
+
+    def _deliver_worker_event_report(self, event):
+        """Route one official location report to a field worker, not the organizer."""
+        live = [(aid, node) for aid, node in self.c.nodes.items()
+                if node.get("online") and node.get("position") is not None
+                and aid in self.runtime_agents]
+        if not live:
+            self.c.emit("TASK_WORKER_EVENT_REPORT_UNDELIVERED", {
+                "step": self.step, "event_action": event["action"], "reason": "no live worker"})
+            return
+        preferred_type = 2 if event["action"] == "start_fire" else 0
+        skilled = [(aid, node) for aid, node in live
+                   if node.get("facts", {}).get("agent_type") == preferred_type]
+        candidates = skilled or live
+        leaders = {edge["leader"] for edge in self.graph.edges.values()}
+        nonleaders = [(aid, node) for aid, node in candidates if aid not in leaders]
+        candidates = nonleaders or candidates
+        x, y = float(event["x"]), float(event["y"])
+        aid, _ = min(candidates, key=lambda item: (
+            (item[1]["position"][0] - x) ** 2 + (item[1]["position"][1] - y) ** 2,
+            int(item[0]) if item[0].isdigit() else item[0]))
+        message = (event.get("announcement", f"Game event: {event['action']}") +
+                   " Official report to this worker only; the organizer has not received it. "
+                   "Report the event and coordinates to your leader, who must inform the organizer. "
+                   "Verify the current physical state before claiming completion.")
+        self.runtime_agents[aid].add_message("ENVIRONMENT", "WORKER_EVENT_REPORT", message, self.step)
+        self.c.emit("TASK_WORKER_EVENT_REPORT_DELIVERED", {
+            "step": self.step, "recipient": aid, "event_action": event["action"],
+            "event_timestep": event["timestep"], "coordinate": [x, y],
+            "routing": "nearest live nonleader of preferred worker type, else nearest available"})
 
     def _deliver_local_event_cues(self, events):
         """Give a reported event coordinate only to a nearby worker."""

@@ -50,8 +50,8 @@ def generate():
     rows = []
     for sequence, events in EVENTS.items():
         for drones, capacity in ((1, 'OneDrone'), (2, 'TwoDrones')):
-            for mode, label in (('local_alert', 'LocalAlert'),
-                                ('public_location', 'PublicLocation')):
+            for mode, label in (('worker_report', 'WorkerReport'),
+                                ('organizer_direct', 'OrganizerDirect')):
                 name = f'{sequence}_{capacity}_{label}'
                 rows.append({'id': name, 'preset': make_preset(name, drones, events),
                              'design': {
