@@ -45,7 +45,7 @@
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/composite_matrix.json": "238dec3e2884fcc0920820ddc0347f8cb81230b60155df6213949611678ad3f5",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/focused_tasks.json": "c2da7222a464fab3c77a3cd71d99d3739c55fc0b0fc7fb305c5d1fa76539cc39",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/initial_structure.py": "9959fb9d0a669d66833905f2c4166a18b1c5a53467aa96b62c13c177047a831a",
-    "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/scenarios/README.zh-CN.md": "66f8dd0b4afcaf0e90b7e14f710a6619b671f5a5049d7c2df111cd457eae03a3",
+    "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/scenarios/README.zh-CN.md": "e880c430c1b10b8e2a9aca3c90e853c1c675b3b5967b17e09bae5582d937d607",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/scenarios/generate.py": "7c9d5ed2c0e2ad0bdb5e9e85142a7e1e00e77e986148889b50fb85e72b3602a7",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/scenarios/tasks.json": "90494c29dfa42fcbf65dec307340c24968781492c4c1d7bf0d8ff408bf283ccd",
     "overlays/ORCH/crew-algorithms/crew_algorithms/wildfire_alg/config/resource_scheduling/structure_matrix.json": "e1ae2f6cb2ab01ee04b5d8bb647ed717cd834e8970f993fcc49e3618a83a186e",
