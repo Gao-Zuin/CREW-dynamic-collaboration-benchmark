@@ -86,6 +86,8 @@ class RuntimeBridge:
                           "score": game_data["score"]}
         if self.global_data is not None and "civilian_target" in self.global_data:
             validator_data["civilian_target"] = self.global_data["civilian_target"]
+        validator_data["submitted_events"] = (self.global_data or {}).get("submitted_events", [])
+        validator_data["fire_ever_active"] = (self.global_data or {}).get("fire_ever_active", False)
         success = check_game_done(validator_data, self.cfg.envs, game_data["score"])
         self.last_validation = {"timestep": self.step, "observation_phase": phase,
                                      "success": bool(success), "rewards": game_data["rewards"],

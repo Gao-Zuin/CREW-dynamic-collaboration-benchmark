@@ -119,6 +119,12 @@ class TaskRuntimeBridge(RuntimeBridge):
             4: "reward[5] reaches civilian_target rescued (initial civilians plus submitted spawn events)",
             5: "after a fire has begun (reward[1] > 0), fire_active=false globally: all active fires are gone",
         }
+        if os.getenv('CREW_RESOURCE_SCHEDULING_FAMILY'):
+            success_rules[3] = ('all scheduled events submitted; fire was active or burned trees '
+                                'and is now inactive globally')
+            success_rules[5] = ('all scheduled events submitted; fire was active or burned trees '
+                                'and is now inactive globally; all initial plus submitted-event '
+                                'civilians rescued')
         world = {"step": self.step, "phase": phase, "mission": game_data["task_description"],
                  "rewards": game_data["rewards"], "fire_active": game_data.get("fire_active"),
                  "reward_schema": ["exploration", "trees_burned", "trees_cut", "fire_extinguished",
@@ -133,13 +139,15 @@ class TaskRuntimeBridge(RuntimeBridge):
                      ("game_type", "map_size", "tree_count", "trees_per_line", "civilian_count",
                       "civilian_clusters", "starting_firefighter_agents")},
                       "validator_success_rule": success_rules.get(getattr(self.cfg.envs, "game_type", None))}}
-        if getattr(self.cfg.envs, "game_type", None) == 4:
+        if getattr(self.cfg.envs, "game_type", None) in (4, 5):
             world["mission_rules"]["civilian_target"] = civilian_target
         event = self.c.emit("TASK_WORLD_SNAPSHOT", world)
         world["evidence_id"] = event["event_id"]
         self.graph.observe(world)
         validator_data = {"rewards": game_data["rewards"], "game_data": game_data, "score": game_data["score"]}
         validator_data["civilian_target"] = civilian_target
+        validator_data["submitted_events"] = (self.global_data or {}).get('submitted_events', [])
+        validator_data['fire_ever_active'] = (self.global_data or {}).get('fire_ever_active', False)
         success = check_game_done(validator_data, self.cfg.envs, game_data["score"])
         self.last_validation = {"timestep": self.step, "observation_phase": phase, "success": bool(success),
                                 "rewards": game_data["rewards"], "fire_active": game_data.get("fire_active"),

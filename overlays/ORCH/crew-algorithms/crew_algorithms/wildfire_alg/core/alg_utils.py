@@ -1,5 +1,6 @@
 import torch
 import numpy as np
+import os
 from pydantic import BaseModel
 
 
@@ -553,6 +554,8 @@ def update_task_progress(global_data, game_data, cfg, submitted_event=None):
     """
     global_data.update(game_data=game_data, rewards=game_data["rewards"],
                        score=game_data["score"])
+    global_data['fire_ever_active'] = (global_data.get('fire_ever_active', False)
+                                      or bool(game_data.get('fire_active')))
     initial_target = getattr(cfg, "civilian_count", 0) * getattr(cfg, "civilian_clusters", 0)
     global_data.setdefault("civilian_target", initial_target)
     if submitted_event is not None:
@@ -564,8 +567,8 @@ def update_task_progress(global_data, game_data, cfg, submitted_event=None):
 def write_task_outcome(global_data, cfg, path):
     """Persist the final returned observation, including the last budgeted action.
 
-    Keep the original completion predicate. Unsubmitted preset events are
-    reported separately; this does not silently impose a new waiting rule.
+    Resource benchmark families use the composite completion predicate.
+    Unsubmitted preset events are reported separately for auditing.
     """
     import json
     from pathlib import Path
@@ -583,6 +586,7 @@ def write_task_outcome(global_data, cfg, path):
                "accounting_version": "returned_state_and_spawn_target_v1",
                "rewards": global_data["rewards"],
                "fire_active": global_data["game_data"].get("fire_active"),
+               "fire_ever_active": global_data.get("fire_ever_active", False),
                "civilian_target": global_data.get("civilian_target",
                    getattr(cfg, "civilian_count", 0) * getattr(cfg, "civilian_clusters", 0)),
                "submitted_events": submitted, "unsubmitted_events": remaining,
@@ -629,6 +633,21 @@ def check_game_done(global_data, cfg, past_score):
     """
     gametype = cfg.game_type
     rewards = global_data.get("rewards", [0] * 13)
+    benchmark_family = os.getenv('CREW_RESOURCE_SCHEDULING_FAMILY')
+    benchmark_family = benchmark_family in {
+        'focused', 'combined', 'structure', 'composite', 'scenarios',
+        'fire_near_civilians', 'commitment_event'}
+    if benchmark_family and gametype in (3, 5):
+        def identity(event):
+            if event.get('event_id'):
+                return ('id', event['event_id'])
+            return ('fixed', event.get('configured_timestep', event['timestep']),
+                    event['action'], event.get('x'), event.get('y'))
+        submitted = global_data.get('submitted_events', [])
+        submitted_keys = {identity(event) for event in submitted}
+        if any(identity(event) not in submitted_keys
+               for event in (getattr(cfg, 'scheduled_events', None) or [])):
+            return False
 
     # Cut trees: correct_trees_cut
     if gametype == 0:
@@ -651,7 +670,7 @@ def check_game_done(global_data, cfg, past_score):
     # contain fire: end when no ignited/on_fire cells remain (signal from Unity)
     elif gametype == 3:
         trees_burned = rewards[1]  # trees_destroyed_fire
-        if trees_burned == 0:
+        if trees_burned == 0 and not (benchmark_family and global_data.get('fire_ever_active')):
             return False  # fire hasn't started yet
         fire_active = global_data.get("game_data", {}).get("fire_active", True)
         if not fire_active:
@@ -667,11 +686,18 @@ def check_game_done(global_data, cfg, past_score):
     # both: end when no ignited/on_fire cells remain (signal from Unity)
     elif gametype == 5:
         trees_burned = rewards[1]  # trees_destroyed_fire
-        if trees_burned == 0:
+        if trees_burned == 0 and not (benchmark_family and global_data.get('fire_ever_active')):
             return False  # fire hasn't started yet
         fire_active = global_data.get("game_data", {}).get("fire_active", True)
         if not fire_active:
-            return True  # fire started and is now fully suppressed
+            if benchmark_family:
+                target = global_data.get('civilian_target')
+                if target is None:
+                    target = cfg.civilian_count * cfg.civilian_clusters + sum(
+                        {'spawn_civilian': 1, 'spawn_civilians_5': 5}.get(e['action'], 0)
+                        for e in global_data.get('submitted_events', []))
+                return rewards[5] >= target
+            return True  # legacy Full_Game predicate
         return False
     else:
         print("invalid game type")
