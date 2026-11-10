@@ -75,6 +75,8 @@ def main():
         'benchmark_runs/unity_travel_probe_20261106/seed503/travel.json',
         'benchmark_runs/commitment_event_deepseek_v4_flash_corrected_seed42_20261110/events.jsonl.gz',
         'benchmark_runs/commitment_event_deepseek_v4_flash_corrected_seed42_20261110/commitment_event_analysis.json',
+        'benchmark_runs/commitment_event_organizer_direct_40step_seed42_20261110/events.jsonl.gz',
+        'benchmark_runs/commitment_event_organizer_direct_40step_seed42_20261110/commitment_event_analysis.json',
     )
     for name in evidence:
         source = WORKSPACE / name

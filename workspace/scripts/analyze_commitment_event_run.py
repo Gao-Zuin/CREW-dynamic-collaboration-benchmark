@@ -41,6 +41,7 @@ def analyze(event_path):
     events = []
     worker_types = {}
     initial_topology = None
+    last_topology = None
     first_topology_change = None
     topology_changes = []
     for event in raw:
@@ -57,10 +58,11 @@ def analyze(event_path):
                         for edge in payload.get('edges', [])}
             if initial_topology is None:
                 initial_topology = topology
-            elif topology != initial_topology and first_topology_change is None:
-                first_topology_change = step
-            if initial_topology is not None and topology != initial_topology:
+            elif topology != last_topology:
                 topology_changes.append(step)
+                if first_topology_change is None:
+                    first_topology_change = step
+            last_topology = topology
     releases = [item for item in events if item['type'] == 'TASK_EVENT_RELEASE_DECISION']
     report = {'event_path': str(event_path),
               'event_releases': [],
@@ -104,6 +106,14 @@ def analyze(event_path):
                          item['payload'].get('event_timestep') == step and
                          item['payload'].get('event_action') == payload.get('action')), None)
         first_worker = delivery['step'] if delivery else None
+        direct_notice = next((item for item in events
+                              if item['type'] == 'TASK_ENVIRONMENT_NOTICE' and
+                              item['payload'].get('event', {}).get('timestep') == step and
+                              item['payload'].get('event', {}).get('action') == payload.get('action')), None)
+        organizer_request_with_coordinate = next((item['step'] for item in events
+            if item['type'] == 'TASK_ORGANIZER_REQUEST' and item['step'] is not None
+            and item['step'] >= step and coordinate
+            and mentions_coordinate(json.dumps(item['payload'].get('messages', []), ensure_ascii=False), *coordinate)), None)
         sighting_type = ('TASK_SOURCE_VIEW_FIRE_SIGHTING' if name == 'fire_at_80_80'
                          else 'TASK_SOURCE_VIEW_CIVILIAN_SIGHTING')
         sighting = next((item for item in events
@@ -130,6 +140,8 @@ def analyze(event_path):
             'old_fire_dozer_moved': payload.get('original_fire_dozer_moved'),
             'closest_worker_by_type_at_release': travel,
             'first_worker_event_delivery_step': first_worker,
+            'first_direct_organizer_notice_step': direct_notice['step'] if direct_notice else None,
+            'first_organizer_request_with_event_coordinate_step': organizer_request_with_coordinate,
             'first_fresh_source_view_target_sighting_step': sighting['step'] if sighting else None,
             'fresh_source_view_target_sighting': sighting['payload'] if sighting else None,
             'first_worker_to_leader_report_with_event_coordinate_step': first_report,

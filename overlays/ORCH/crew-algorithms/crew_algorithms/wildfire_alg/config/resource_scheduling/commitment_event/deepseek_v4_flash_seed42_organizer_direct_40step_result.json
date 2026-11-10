@@ -1,0 +1,328 @@
+{
+  "event_path": "benchmark_runs/commitment_event_organizer_direct_40step_seed42_20261110/events.jsonl",
+  "event_releases": [
+    {
+      "event_id": "five_civilians_at_80_75",
+      "step": 8,
+      "release_reason": "condition_met",
+      "old_fire_dozer_moved": true,
+      "closest_worker_by_type_at_release": {
+        "firefighter": {
+          "agent_id": "4",
+          "position": [
+            90.0,
+            39.0
+          ],
+          "euclidean_distance": 37.36,
+          "optimistic_travel_steps": 4
+        },
+        "bulldozer": {
+          "agent_id": "9",
+          "position": [
+            52.0,
+            43.0
+          ],
+          "euclidean_distance": 42.52,
+          "optimistic_travel_steps": 6
+        },
+        "drone": {
+          "agent_id": "10",
+          "position": [
+            20.0,
+            52.0
+          ],
+          "euclidean_distance": 64.26,
+          "optimistic_travel_steps": 4
+        },
+        "helicopter": {
+          "agent_id": "11",
+          "position": [
+            50.0,
+            12.0
+          ],
+          "euclidean_distance": 69.78,
+          "optimistic_travel_steps": 3
+        }
+      },
+      "first_worker_event_delivery_step": null,
+      "first_direct_organizer_notice_step": 8,
+      "first_organizer_request_with_event_coordinate_step": 9,
+      "first_fresh_source_view_target_sighting_step": 11,
+      "fresh_source_view_target_sighting": {
+        "step": 11,
+        "recipient": "10",
+        "event_timestep": 8,
+        "event_coordinate": [
+          80.0,
+          75.0
+        ],
+        "observed_civilian_cells_near_event": [
+          [
+            80.0,
+            73.0
+          ],
+          [
+            79.0,
+            74.0
+          ],
+          [
+            78.0,
+            75.0
+          ]
+        ],
+        "worker_position": [
+          68.0,
+          66.0
+        ],
+        "provenance": "fresh worker view near report; civilian identity and count unverified"
+      },
+      "first_worker_to_leader_report_with_event_coordinate_step": null,
+      "first_leader_to_organizer_report_with_event_coordinate_step": 10,
+      "first_plan_commit_after_event_step": 9,
+      "first_topology_change_after_event_step": 15,
+      "first_topology_change_after_organizer_report_step": 15,
+      "first_dozer_cut_command_after_event_step": 9,
+      "first_helicopter_pickup_command_after_event_step": null,
+      "command_note": "authorized commands are not verified physical effects; graph changes after an event or report are temporal associations, not causal proof"
+    },
+    {
+      "event_id": "fire_at_80_80",
+      "step": 14,
+      "release_reason": "after_previous_event",
+      "old_fire_dozer_moved": true,
+      "closest_worker_by_type_at_release": {
+        "firefighter": {
+          "agent_id": "8",
+          "position": [
+            74.0,
+            40.0
+          ],
+          "euclidean_distance": 40.45,
+          "optimistic_travel_steps": 4
+        },
+        "bulldozer": {
+          "agent_id": "9",
+          "position": [
+            48.0,
+            47.0
+          ],
+          "euclidean_distance": 45.97,
+          "optimistic_travel_steps": 6
+        },
+        "drone": {
+          "agent_id": "10",
+          "position": [
+            82.0,
+            72.0
+          ],
+          "euclidean_distance": 8.25,
+          "optimistic_travel_steps": 1
+        },
+        "helicopter": {
+          "agent_id": "11",
+          "position": [
+            42.0,
+            46.0
+          ],
+          "euclidean_distance": 50.99,
+          "optimistic_travel_steps": 2
+        }
+      },
+      "first_worker_event_delivery_step": null,
+      "first_direct_organizer_notice_step": 14,
+      "first_organizer_request_with_event_coordinate_step": 15,
+      "first_fresh_source_view_target_sighting_step": 14,
+      "fresh_source_view_target_sighting": {
+        "step": 14,
+        "recipient": "10",
+        "event_timestep": 14,
+        "event_coordinate": [
+          80.0,
+          80.0
+        ],
+        "observed_fire_cells_near_event": [
+          [
+            80.0,
+            80.0
+          ]
+        ],
+        "worker_position": [
+          88.0,
+          78.0
+        ],
+        "own_view_radius": 15,
+        "provenance": "fire cells inside source-defined own update square; outer shared cache excluded; deployed-build equivalence not independently attested"
+      },
+      "first_worker_to_leader_report_with_event_coordinate_step": null,
+      "first_leader_to_organizer_report_with_event_coordinate_step": 16,
+      "first_plan_commit_after_event_step": 15,
+      "first_topology_change_after_event_step": 15,
+      "first_topology_change_after_organizer_report_step": 17,
+      "first_dozer_cut_command_after_event_step": 15,
+      "first_helicopter_pickup_command_after_event_step": null,
+      "command_note": "authorized commands are not verified physical effects; graph changes after an event or report are temporal associations, not causal proof"
+    }
+  ],
+  "first_topology_change_step": 3,
+  "source_view_civilian_sighting_steps": [
+    11,
+    16,
+    18,
+    29,
+    39
+  ],
+  "source_view_fire_sighting_steps": [
+    14,
+    16
+  ],
+  "new_civilian_entity_count": null,
+  "new_civilians_rescued": null,
+  "new_fire_region_extinguished": null,
+  "physical_outcomes_note": "Unity global rewards do not identify new civilian entities or a fire region",
+  "last_validator": {
+    "timestep": 39,
+    "observation_phase": "episode_end",
+    "success": false,
+    "rewards": [
+      9590,
+      107,
+      161,
+      25,
+      0,
+      0,
+      0,
+      10,
+      3,
+      1,
+      4,
+      0,
+      0
+    ],
+    "fire_active": true,
+    "civilian_target": 10,
+    "validator": "core.alg_utils.check_game_done",
+    "source_observation_phase": "after_action"
+  },
+  "run_metadata": {
+    "request_model": "deepseek-v4-flash",
+    "seed": 42,
+    "arm": "adaptive",
+    "max_steps": 40,
+    "information_mode": "organizer_direct",
+    "date": "2026-11-10",
+    "thinking": "disabled in worker and organizer calls",
+    "parallel_worker_model_calls": 8,
+    "message_delivery": "next decision step"
+  },
+  "organizer_counts": {
+    "TASK_ORGANIZER_RESPONSE": 35,
+    "TASK_PROPOSAL_REJECTED": 3,
+    "TASK_GRAPH_COMMITTED": 36,
+    "TASK_LEADER_REPORT": 57
+  },
+  "topology_changes": [
+    {
+      "step": 3,
+      "version": 3,
+      "attrition": false,
+      "reason": "No environment notices; leaders report 4 civilians confirmed near (50,11) and no water source found. Keep fire containment edge, fold recon into support since recon's only remaining job is water-source search which support also needs, and keep a small mixed rescue/search team. All 11 online agents assigned exactly once."
+    },
+    {
+      "step": 15,
+      "version": 12,
+      "attrition": false,
+      "reason": "New fire at (80,80) is five cells from the (80,75) civilian cluster, so the eastern rescue and the new fire must be handled together; the western fire team is out of water and needs aerial suppression plus a drone overflight. Keep two groups: western fire containment (with AGENT_10 scouting the fire and AGENT_11 providing aerial water) and eastern rescue/fire team (AGENT_8 plus a second firefighter and AGENT_11 transport). AGENT_11 bridges both by transport/suppression, with active assignment to the eastern team."
+    },
+    {
+      "step": 16,
+      "version": 13,
+      "attrition": false,
+      "reason": "Two independent objectives now exist: containing the confirmed fire at (23,51) and rescuing 5 civilians near (80,75) while assessing the new fire at (80,80). AGENT_10 is the only drone and is needed for both fire confirmation and eastern scouting; AGENT_11 is the only helicopter and is needed for both aerial suppression and eastern transport. Keep two mixed groups but rebalance: original_fire keeps ground suppression and firebreak work with AGENT_10 tasked to confirm (23,51) first; support gets a second firefighter (AGENT_5) routed east and AGENT_11 tasked to eastern transport, with aerial suppression at (23,51) explicitly deprioritized unless AGENT_11 is already empty and near the fire. AGENT_10's dual membership is a real shared scouting role, not a bridge label."
+    },
+    {
+      "step": 17,
+      "version": 14,
+      "attrition": false,
+      "reason": "Two independent objectives remain: containment of the (23,51) fire with south/SE spread to (25,53), and eastern civilian rescue plus the new (80,80) fire. AGENT_10 is shared as the only scout; AGENT_11 is tied to original_fire suppression, so eastern fire control needs a closer water confirmation at ~(65,45). Keep two mixed groups, fold AGENT_5 into the eastern rescue as second firefighter, and keep AGENT_7 on western civilian cleanup."
+    },
+    {
+      "step": 18,
+      "version": 15,
+      "attrition": false,
+      "reason": "Keep two independent objectives: western fire containment at (23,51)-(25,53) and eastern rescue/fire control at (80,75)/(80,80). AGENT_10 is shared as the only scout for both; AGENT_11 shifts to eastern aerial suppression since it holds full water and eastern fire is closer to civilians. AGENT_5 joins eastern rescue as second firefighter; AGENT_7 finishes western civilian pickups."
+    },
+    {
+      "step": 19,
+      "version": 16,
+      "attrition": false,
+      "reason": "Two independent objectives remain: containment of the (21-25,50-53) fire and eastern rescue/suppression at (80,75)/(80,80). Keep two mixed groups; fold AGENT_10 into the eastern group as its active assignment since the eastern fire needs drone confirmation and water search, while original_fire relies on AGENT_3's direct sightings and AGENT_9's firebreak. AGENT_11 stays east for aerial suppression; original_fire suppression waits on refills at (19,28)."
+    },
+    {
+      "step": 25,
+      "version": 22,
+      "attrition": true,
+      "reason": "remove offline members only"
+    },
+    {
+      "step": 26,
+      "version": 23,
+      "attrition": true,
+      "reason": "remove offline members only"
+    },
+    {
+      "step": 31,
+      "version": 28,
+      "attrition": true,
+      "reason": "remove offline members only"
+    },
+    {
+      "step": 32,
+      "version": 29,
+      "attrition": false,
+      "reason": "Keep two mixed teams: western fire complex (suppression + firebreak + civilian near 18-19,49-50) and eastern cluster (civilian rescue + firebreak). Fold AGENT_10's drone overwatch into the western team to answer repeated requests for aerial confirmation of the E/N extent, while keeping its eastern firebreak verification role via shared membership. AGENT_7's northern civilian cluster is largely handled; redirect it east as already reported. No new edge needed."
+    },
+    {
+      "step": 34,
+      "version": 31,
+      "attrition": false,
+      "reason": "Preserve the two working teams; fold the eastern south-front firebreak into the support edge that already owns eastern rescue/fire work, and keep the western complex with original_fire. Only online agents (3,5,6,7,8,10,11) are assigned; offline 1,2,4,9 are dropped from memberships. AGENT_10 bridges both groups for aerial confirmation."
+    },
+    {
+      "step": 37,
+      "version": 34,
+      "attrition": false,
+      "reason": "Two independent objectives remain: the western fire complex with an unassigned west-edge suppression/civilian rescue, and the eastern cluster with a critical south firebreak. AGENT_3 is the only online member of original_fire and cannot cover both west edge and E flank; AGENT_10 is far east and better used for eastern aerial confirmation. Keep two edges but rebalance: original_fire focuses on western E-cell work and flags the west edge as unassigned (AGENT_1 offline), while support keeps the eastern rescue/south-firebreak work with AGENT_10 bridging for aerial confirmation of the south front."
+    },
+    {
+      "step": 39,
+      "version": 36,
+      "attrition": false,
+      "reason": "Two independent objectives remain: the western fire complex (single-handed AGENT_3, west edge/civilian unassigned) and the eastern civilian rescue plus the newly reported live NW/W fire threat near (75-78,70-75). Keep two mixed groups; fold AGENT_8 into eastern rescue/suppression support since the south firebreak is redundant, and keep AGENT_10 bridging for aerial confirmation of both fronts."
+    }
+  ],
+  "topology_change_count": 13,
+  "non_attrition_topology_change_count": 10,
+  "step_25_snapshot": {
+    "rewards": [
+      9560,
+      42,
+      147,
+      0,
+      0,
+      0,
+      0,
+      10,
+      4,
+      1,
+      2,
+      0,
+      0
+    ],
+    "fire_active": true
+  },
+  "usage": {
+    "input_tokens": 6420063,
+    "output_tokens": 377400,
+    "api_calls": 1619
+  }
+}

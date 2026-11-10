@@ -45,6 +45,8 @@
         }
       },
       "first_worker_event_delivery_step": 8,
+      "first_direct_organizer_notice_step": null,
+      "first_organizer_request_with_event_coordinate_step": null,
       "first_fresh_source_view_target_sighting_step": null,
       "fresh_source_view_target_sighting": null,
       "first_worker_to_leader_report_with_event_coordinate_step": 10,
@@ -100,6 +102,8 @@
         }
       },
       "first_worker_event_delivery_step": 14,
+      "first_direct_organizer_notice_step": null,
+      "first_organizer_request_with_event_coordinate_step": null,
       "first_fresh_source_view_target_sighting_step": null,
       "fresh_source_view_target_sighting": null,
       "first_worker_to_leader_report_with_event_coordinate_step": 16,
