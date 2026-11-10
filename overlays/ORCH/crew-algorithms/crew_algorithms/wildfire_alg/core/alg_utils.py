@@ -567,7 +567,8 @@ def update_task_progress(global_data, game_data, cfg, submitted_event=None):
 def write_task_outcome(global_data, cfg, path):
     """Persist the final returned observation, including the last budgeted action.
 
-    Resource benchmark families use the composite completion predicate.
+    Resource benchmark families use the original second-fire completion
+    predicate after every scheduled event has been submitted.
     Unsubmitted preset events are reported separately for auditing.
     """
     import json
@@ -583,7 +584,10 @@ def write_task_outcome(global_data, cfg, path):
                  if submitted_identity(e) not in submitted_keys]
     outcome = {"success": bool(check_game_done(global_data, cfg, global_data["score"])),
                "validator": "core.alg_utils.check_game_done",
-               "accounting_version": "returned_state_and_spawn_target_v1",
+               "accounting_version": "returned_state_and_fire_completion_v2",
+               "success_scope": ("fire_control_only" if getattr(cfg, "game_type", None) == 5
+                                 else "configured_game_type"),
+               "civilian_rescue_scored": getattr(cfg, "game_type", None) == 4,
                "rewards": global_data["rewards"],
                "fire_active": global_data["game_data"].get("fire_active"),
                "fire_ever_active": global_data.get("fire_ever_active", False),
@@ -690,14 +694,9 @@ def check_game_done(global_data, cfg, past_score):
             return False  # fire hasn't started yet
         fire_active = global_data.get("game_data", {}).get("fire_active", True)
         if not fire_active:
-            if benchmark_family:
-                target = global_data.get('civilian_target')
-                if target is None:
-                    target = cfg.civilian_count * cfg.civilian_clusters + sum(
-                        {'spawn_civilian': 1, 'spawn_civilians_5': 5}.get(e['action'], 0)
-                        for e in global_data.get('submitted_events', []))
-                return rewards[5] >= target
-            return True  # legacy Full_Game predicate
+            # Match the original Second_Fire task. Unity's Both mode has no
+            # evacuation destination and cannot increase rescued_civilians.
+            return True
         return False
     else:
         print("invalid game type")

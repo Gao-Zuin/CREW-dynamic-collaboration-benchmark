@@ -123,8 +123,8 @@ class TaskRuntimeBridge(RuntimeBridge):
             success_rules[3] = ('all scheduled events submitted; fire was active or burned trees '
                                 'and is now inactive globally')
             success_rules[5] = ('all scheduled events submitted; fire was active or burned trees '
-                                'and is now inactive globally; all initial plus submitted-event '
-                                'civilians rescued')
+                                'and is now inactive globally; this validates fire control only '
+                                '(Unity Both mode has no civilian evacuation target)')
         world = {"step": self.step, "phase": phase, "mission": game_data["task_description"],
                  "rewards": game_data["rewards"], "fire_active": game_data.get("fire_active"),
                  "reward_schema": ["exploration", "trees_burned", "trees_cut", "fire_extinguished",
