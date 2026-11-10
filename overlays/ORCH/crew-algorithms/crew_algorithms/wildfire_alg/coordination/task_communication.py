@@ -8,17 +8,17 @@ from your group context). A GROUP without to broadcasts within that edge:
 <GROUP edge="edge-id" to="member-id">message for a current member</GROUP>
 <REPORT edge="edge-id">new observation or obstacle for this edge's leader</REPORT>
 <LEADER edge="my-edge" to="other-edge">request or information for the other leader</LEADER>
-<ORGANIZER edge="my-edge">analysis and requested organizational change</ORGANIZER>
+<ORGANIZER edge="my-edge">new worker information or requested organizational change</ORGANIZER>
 Do not use GLOBAL, AGENT_n, or EDGE tags. There is no whole-team broadcast.
 You may send from any edge you belong to; your active action assignment stays
 unchanged. REPORT goes to that edge's leader, not automatically to the center.
 Only that edge's leader may use LEADER or ORGANIZER. In <justification>, analyze
 new reports against your own observations: choose to handle locally with your
 own next action, coordinate members via GROUP, consult another leader via LEADER,
-or escalate via ORGANIZER if a resource/role/group change is needed. Escalation
-must include your analysis, what local work can continue, and what help/change
-is needed; do not merely relay the report. No escalation is required if local
-coordination covers all relevant work. A new mission objective outside your edge
+or use ORGANIZER to share new information or request a resource/role/group
+change. State the source and whether the information is observed or unverified;
+include the requested help when a change is needed.
+Do not repeat unchanged status. A new mission objective outside your edge
 is not automatically someone else's responsibility. If no current edge covers it,
 or local coordination cannot supply the needed capability, report that gap via
 ORGANIZER while useful local work continues. Ask for coverage, not necessarily

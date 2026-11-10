@@ -290,7 +290,12 @@ class TaskRuntimeBridge(RuntimeBridge):
                             "You need not discover or relay them to make the center aware. "
                             "Continue reporting your own observations, local conditions, resource gaps "
                             "and implications through your leader.\n" + original)
-        return self.prompt(agent_id, original) + "\n" + INSTRUCTIONS
+        leader_rule = ("\nLEADER REPORTING RULE: When a worker REPORT brings new information, "
+                       "send it to the organizer using ORGANIZER on an edge you lead. "
+                       "Name the worker, the new fact, and whether it was directly observed "
+                       "or is an unverified report. Continue local work; do not repeat unchanged facts."
+                       if any(edge['leader'] == str(agent_id) for edge in self.graph.edges.values()) else "")
+        return self.prompt(agent_id, original) + "\n" + INSTRUCTIONS + leader_rule
 
     def communication_order(self, agents):
         leaders = {e["leader"] for e in self.graph.edges.values()}
