@@ -1,6 +1,6 @@
 # DeepSeek Flash 单例运行：新增五名平民，再出现邻近火点
 
-配置：`FiveCiviliansAt80_75AfterOriginalFireDozerMovesThenFireAt80_80_WorkerReport`，seed 42，动态组织，26 步，11 名 worker。请求模型名为 `deepseek-v4-flash`，API 响应名为 `deepseek-flash`。worker 和组织者调用都关闭思考输出；同一步 worker 模型调用并行，消息下一步投递。2026-11-10 运行，日志在本机 `benchmark_runs/commitment_event_deepseek_v4_flash_corrected_seed42_20261110/`，可复核的摘要见同目录的 `deepseek_v4_flash_seed42_adaptive_result.json`。
+配置：`FiveCiviliansAt80_75AfterOriginalFireDozerMovesThenFireAt80_80_WorkerReport`，seed 42，动态组织，26 步，11 名 worker。请求模型名为 `deepseek-v4-flash`，API 响应名为 `deepseek-flash`。worker 和组织者调用都关闭思考输出；同一步 worker 模型调用并行，消息下一步投递。2026-11-10 运行，日志在本机 `benchmark_runs/commitment_event_deepseek_v4_flash_corrected_seed42_20261110/`；仓库另存有 `workspace/benchmark_runs/commitment_event_deepseek_v4_flash_corrected_seed42_20261110/events.jsonl.gz`，可解压后用 `scripts/analyze_commitment_event_run.py` 复核。精简结果见本任务目录的 `deepseek_v4_flash_seed42_adaptive_result.json`。
 
 | 事实 | 新平民 `(80,75)` | 新火点 `(80,80)` |
 |---|---:|---:|
