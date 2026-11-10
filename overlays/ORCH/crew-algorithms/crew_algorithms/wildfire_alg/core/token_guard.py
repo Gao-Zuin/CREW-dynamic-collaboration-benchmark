@@ -196,7 +196,7 @@ def guarded_chat_completion(
         print(f"{label}: {token_count}/{budget} input tokens for {model}")
     for attempt in range(1, 5):
         try:
-            if model.startswith(("deepseek-flash", "deepseek-v4-pro")):
+            if model.startswith(("deepseek-flash", "deepseek-v4-flash", "deepseek-v4-pro")):
                 kwargs["extra_body"] = {**(kwargs.get("extra_body") or {}), "thinking": {"type": "disabled"}}
             response = client.chat.completions.create(model=model, messages=messages, **kwargs)
             record_api_usage(response)

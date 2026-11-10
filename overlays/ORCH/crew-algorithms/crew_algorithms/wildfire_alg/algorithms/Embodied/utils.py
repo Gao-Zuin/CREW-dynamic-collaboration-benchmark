@@ -2,6 +2,7 @@ import os
 import re
 from openai import OpenAI, BadRequestError
 from crew_algorithms.wildfire_alg.core.token_guard import guarded_chat_completion
+from crew_algorithms.wildfire_alg.core.usage_count import record_usage
 from pydantic import BaseModel
 from crew_algorithms.wildfire_alg.algorithms.Embodied.agent import Agent
 from crew_algorithms.wildfire_alg.libraries.firefighter_action_library import Run_Firefighter_Action
@@ -105,13 +106,11 @@ def translate_action(action_str: str, type: int, global_data: dict) -> Action:
                 temperature=0,
                 extra_body={"chat_template_kwargs": {"enable_thinking": False}}
             )
-        global_data["api_calls"]+=1
-        global_data["input_tokens"]+=response.usage.prompt_tokens
-        global_data["output_tokens"]+=response.usage.completion_tokens
+        record_usage(global_data, response)
         
         result = response.choices[0].message.content
     except BadRequestError as e:
-        global_data["api_calls"]+=1
+        record_usage(global_data)
         result = "ERROR EXECUTING"
     
     if result.find("</think>") != -1:
@@ -280,13 +279,11 @@ def communication_round(agent: Agent, global_data: dict):
                 temperature=0,
                 extra_body={"chat_template_kwargs": {"enable_thinking": False}}
             )
-        global_data["api_calls"]+=1
-        global_data["input_tokens"]+=response.usage.prompt_tokens
-        global_data["output_tokens"]+=response.usage.completion_tokens
+        record_usage(global_data, response)
         content = response.choices[0].message.content
     except BadRequestError as e:
         print(f"BadRequestError for Agent_{agent.id}: {e}")
-        global_data["api_calls"]+=1
+        record_usage(global_data)
         content = "ERROR EXECUTING COMMUNICATION"
     
     agent.log_chat("Sending Messages", [("user", user_message), ("assistant", content)])
@@ -433,13 +430,11 @@ def action_round(agent: Agent, global_data: dict):
                 temperature=0,
                 extra_body={"chat_template_kwargs": {"enable_thinking": False}}
             )
-        global_data["api_calls"]+=1
-        global_data["input_tokens"]+=response.usage.prompt_tokens
-        global_data["output_tokens"]+=response.usage.completion_tokens
+        record_usage(global_data, response)
         result = response.choices[0].message.content
     except BadRequestError as e:
         print(f"BadRequestError for Agent_{agent.id}: {e}")
-        global_data["api_calls"]+=1
+        record_usage(global_data)
         result = "ERROR EXECUTING ACTION"
     
     agent.log_chat("Choosing Action", [("user", user_message), ("assistant", result)])

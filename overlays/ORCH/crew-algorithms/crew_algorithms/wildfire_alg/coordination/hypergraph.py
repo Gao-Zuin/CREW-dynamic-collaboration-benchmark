@@ -7,6 +7,7 @@ The policy owns membership only; contracts must come from trusted task metadata.
 from copy import deepcopy
 import json
 import math
+from threading import RLock
 from pathlib import Path
 import time
 
@@ -24,12 +25,17 @@ class Coordinator:
         self.committed_scopes = set()
         self.retired_sessions = set()
         self.path = Path(event_path) if event_path else None
+        self._emit_lock = RLock()
         if self.path:
             self.path.parent.mkdir(parents=True, exist_ok=True)
             if self.path.exists():
                 raise FileExistsError(self.path)
 
     def emit(self, event_type, payload=None, agent_id=None, **ids):
+        with self._emit_lock:
+            return self._emit_unlocked(event_type, payload, agent_id, **ids)
+
+    def _emit_unlocked(self, event_type, payload=None, agent_id=None, **ids):
         event = dict(episode_id=self.episode_id, task_id=self.task_id,
                      task_seed=self.seed, arm=self.arm, agent_id=agent_id,
                      session_epoch=self.nodes.get(agent_id, {}).get("session_epoch"),

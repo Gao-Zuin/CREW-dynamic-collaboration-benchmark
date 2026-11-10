@@ -31,6 +31,8 @@ class TaskRuntimeBridge(RuntimeBridge):
         self.local_cues_sent = set()
         self.local_event_candidates = []
         self.source_view_fire_sightings_sent = set()
+        self.source_view_civilian_sightings_sent = set()
+        self.original_fire_dozer_moved = False
         self.structural_initial_plan = os.getenv("CREW_HT_STRUCTURAL_INITIAL_PLAN") == "1"
         self.round_delivery = os.getenv("CREW_HT_ROUND_DELIVERY") == "1"
         self.routed_messages = []
@@ -71,6 +73,8 @@ class TaskRuntimeBridge(RuntimeBridge):
                      "local_event_radius": self.local_event_radius,
                      "structural_initial_plan": self.structural_initial_plan,
                      "round_delivery": self.round_delivery,
+                     "parallel_model_calls": os.getenv('CREW_HT_PARALLEL_MODEL_CALLS') == '1',
+                     "model_workers": int(os.getenv('CREW_HT_MODEL_WORKERS', '8')),
                      "initial_plan_replay": bool(self.initial_plan_path),
                      "manual_regroup_step": self.regroup_step})
 
@@ -104,8 +108,7 @@ class TaskRuntimeBridge(RuntimeBridge):
         self.observed_ignition = self.observed_ignition or game_data["rewards"][8] >= 1
         # Event command/announcement is a report of what was injected, not proof
         # of its physical effect; actual node/reward changes remain separate.
-        announcements = [dict(e) for e in (getattr(self.cfg.envs, "scheduled_events", None) or [])
-                         if e["timestep"] < self.step or (phase == "after_action" and e["timestep"] == self.step)]
+        announcements = [dict(e) for e in (self.global_data or {}).get('submitted_events', [])]
         civilian_target = (self.global_data or {}).get("civilian_target",
             getattr(self.cfg.envs, "civilian_count", 0) * getattr(self.cfg.envs, "civilian_clusters", 0))
         success_rules = {
@@ -382,6 +385,11 @@ class TaskRuntimeBridge(RuntimeBridge):
                       "current_cell": after.get("facts", {}).get("current_cell"),
                       "status": "env.step returned; task completion not inferred"}
             agent.past_actions.append(json.dumps(record, ensure_ascii=False))
+            if (before.get('facts', {}).get('agent_type') == 1 and
+                    self.graph.active.get(aid) == 'original_fire' and
+                    isinstance(action, (list, tuple)) and action and action[0] in (0, 1) and
+                    before.get('position') != after.get('position')):
+                self.original_fire_dozer_moved = True
         submitted = global_data.get("submitted_events", [])
         for event in submitted:
             if event.get("timestep") == self.step:
@@ -409,6 +417,26 @@ class TaskRuntimeBridge(RuntimeBridge):
                 self.local_event_candidates.append(dict(event))
         self._deliver_local_event_cues(self.local_event_candidates)
         self._record_source_view_fire_sightings()
+        self._record_source_view_civilian_sightings()
+
+    def event_release_ready(self, event):
+        if event.get('release_condition') != 'original_fire_dozer_moved_and_initial_rescue_unfinished':
+            return False
+        world = self.graph.world or {}
+        dozer_online = any(node.get('online') and node.get('facts', {}).get('agent_type') == 1
+                           for node in world.get('nodes', {}).values())
+        return (self.original_fire_dozer_moved and dozer_online and
+                bool(world.get('fire_active')) and
+                (world.get('rewards') or [0] * 13)[5] < 5)
+
+    def record_event_release(self, event):
+        self.c.emit('TASK_EVENT_RELEASE_DECISION', {
+            'step': self.step, 'event_id': event.get('event_id'),
+            'action': event['action'], 'release_reason': event.get('release_reason'),
+            'original_fire_dozer_moved': self.original_fire_dozer_moved,
+            'fire_active': self.graph.world.get('fire_active'),
+            'civilians_rescued': (self.graph.world.get('rewards') or [0] * 13)[5],
+            'snapshot_evidence_id': self.graph.world.get('evidence_id')})
 
     def _deliver_worker_event_report(self, event):
         """Route one official location report to a field worker, not the organizer."""
@@ -498,6 +526,28 @@ class TaskRuntimeBridge(RuntimeBridge):
                     'worker_position': node.get('position'),
                     'own_view_radius': view.get('radius'),
                     'provenance': 'fire cells inside source-defined own update square; outer shared cache excluded; deployed-build equivalence not independently attested'})
+
+    def _record_source_view_civilian_sightings(self):
+        """Audit fresh local civilian pixels near an injected report, without inferring count."""
+        for event in self.local_event_candidates:
+            if event.get('action') not in ('spawn_civilian', 'spawn_civilians_5'):
+                continue
+            target = (float(event['x']), float(event['y']))
+            for aid, node in self.c.nodes.items():
+                key = (event['timestep'], aid)
+                if key in self.source_view_civilian_sightings_sent or not node.get('online'):
+                    continue
+                view = node.get('facts', {}).get('own_view_source_candidate', {})
+                cells = [cell for cell in view.get('cells', {}).get('civilian', [])
+                         if ((cell[0] - target[0]) ** 2 + (cell[1] - target[1]) ** 2) ** .5 <= 3]
+                if not cells:
+                    continue
+                self.source_view_civilian_sightings_sent.add(key)
+                self.c.emit('TASK_SOURCE_VIEW_CIVILIAN_SIGHTING', {
+                    'step': self.step, 'recipient': aid, 'event_timestep': event['timestep'],
+                    'event_coordinate': list(target), 'observed_civilian_cells_near_event': cells[:16],
+                    'worker_position': node.get('position'),
+                    'provenance': 'fresh worker view near report; civilian identity and count unverified'})
 
     def action_started(self, agent, action):
         super().action_started(agent, action)

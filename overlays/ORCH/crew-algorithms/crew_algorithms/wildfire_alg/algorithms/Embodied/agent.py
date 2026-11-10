@@ -1,6 +1,7 @@
 import os
 from openai import OpenAI, BadRequestError
 from crew_algorithms.wildfire_alg.core.token_guard import guarded_chat_completion
+from crew_algorithms.wildfire_alg.core.usage_count import record_usage
 from crew_algorithms.wildfire_alg.algorithms.Embodied.__main__ import Config
 from typing import List, Tuple, Dict
 
@@ -189,16 +190,14 @@ class Agent:
                     extra_body={"chat_template_kwargs": {"enable_thinking": False}}
                 )
             
-            global_data["api_calls"]+=1
-            global_data["input_tokens"]+=response.usage.prompt_tokens
-            global_data["output_tokens"]+=response.usage.completion_tokens
+            record_usage(global_data, response)
             perception = response.choices[0].message.content
             self.log_chat("Summarizing Observations", [("user", user_message), ("assistant", perception)])
             self.last_perception = perception
             client.close()
         except BadRequestError as e:
             print(f"BadRequestError for Agent_{self.id}: {e}")
-            global_data["api_calls"]+=1
+            record_usage(global_data)
             perception = "I am having trouble understanding my surroundings right now."
         
         return perception

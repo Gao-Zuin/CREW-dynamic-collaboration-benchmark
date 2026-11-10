@@ -41,6 +41,7 @@ register_env_configs()
 def wildfire_alg(cfg: Config):
     """An implementation of a wildfire alg."""
     import os
+    from concurrent.futures import ThreadPoolExecutor
     import uuid
     from pathlib import Path
 
@@ -152,6 +153,12 @@ def wildfire_alg(cfg: Config):
     # Opt-in state layer. Unset environment variable preserves original runtime.
     from crew_algorithms.wildfire_alg.coordination.runtime import RuntimeBridge
     bridge = RuntimeBridge.from_environment(cfg, path)
+    parallel_model_calls = bool(bridge is not None and getattr(bridge, 'arm', None) == 'HT' and
+                                getattr(bridge, 'round_delivery', False) and
+                                os.getenv('CREW_HT_PARALLEL_MODEL_CALLS') == '1')
+    model_workers = max(1, int(os.getenv('CREW_HT_MODEL_WORKERS', '8')))
+    if parallel_model_calls:
+        print(f'[MODEL CALLS] Same-step perception, communication and action batched with {model_workers} workers; messages still deliver next step')
     if bridge is not None:
         global_data["hypergraph_bridge"] = bridge
     print("Agent Count: " + str(len(agents)))
@@ -239,10 +246,15 @@ def wildfire_alg(cfg: Config):
 
 
         # clears messages older than 2
-        for agent in agents:
-            if bridge is not None and hasattr(bridge, "allows_inference") and not bridge.allows_inference(agent):
-                continue
-            agent.generate_perception(cfg.envs, agent_states, global_data)
+        eligible = [agent for agent in agents
+                    if bridge is None or not hasattr(bridge, 'allows_inference') or bridge.allows_inference(agent)]
+        if parallel_model_calls:
+            with ThreadPoolExecutor(max_workers=model_workers) as pool:
+                list(pool.map(lambda agent: agent.generate_perception(cfg.envs, agent_states, global_data), eligible))
+        else:
+            for agent in eligible:
+                agent.generate_perception(cfg.envs, agent_states, global_data)
+        for agent in eligible:
             agent.clean_messages(t, 1)
 
 
@@ -252,24 +264,34 @@ def wildfire_alg(cfg: Config):
         for round in range(communication_rounds):
 
             communication_agents = bridge.communication_order(agents) if bridge is not None and hasattr(bridge, "communication_order") else agents
-            for agent in communication_agents:
-                if bridge is not None and hasattr(bridge, "allows_inference") and not bridge.allows_inference(agent):
-                    continue
-                communication_round(agent=agent, global_data=global_data)
+            communicating = [agent for agent in communication_agents
+                             if bridge is None or not hasattr(bridge, 'allows_inference') or bridge.allows_inference(agent)]
+            if parallel_model_calls:
+                with ThreadPoolExecutor(max_workers=model_workers) as pool:
+                    list(pool.map(lambda agent: communication_round(agent=agent, global_data=global_data), communicating))
+            else:
+                for agent in communicating:
+                    communication_round(agent=agent, global_data=global_data)
 
         if bridge is not None and hasattr(bridge, "after_communication"):
             bridge.after_communication(global_data)
 
         env_action = [[0,0,0] for _ in range(cfg.envs.num_agents)]
 
-        for agent in agents:
+        def proposed_action(agent):
+            if bridge is not None and hasattr(bridge, "requires_hold") and bridge.requires_hold(agent):
+                return [0, *agent.last_position]
+            return action_round(agent=agent, global_data=global_data)
+
+        if parallel_model_calls:
+            with ThreadPoolExecutor(max_workers=model_workers) as pool:
+                proposals = list(pool.map(proposed_action, agents))
+        else:
+            proposals = [proposed_action(agent) for agent in agents]
+
+        for agent, action_array in zip(agents, proposals):
             if agent.type==0 and agent.extra_variables[2]==1:
                 env_action[agent.id] = [0,0,0]
-
-            if bridge is not None and hasattr(bridge, "requires_hold") and bridge.requires_hold(agent):
-                action_array = [0, *agent.last_position]
-            else:
-                action_array = action_round(agent=agent, global_data=global_data)
             if bridge is not None:
                 action_array = bridge.guard(agent, action_array,
                     lambda agent=agent: action_round(agent=agent, global_data=global_data))
@@ -291,9 +313,15 @@ def wildfire_alg(cfg: Config):
 
         # Scheduled event injection
         scheduled_event_action = None
-        events_this_step = [e for e in scheduled_events if e["timestep"] == t]
+        from crew_algorithms.wildfire_alg.core.scheduled_event_release import event_for_step
+        released = event_for_step(scheduled_events, t, global_data.get('submitted_events', []),
+                                  bridge.event_release_ready if bridge is not None and
+                                  hasattr(bridge, 'event_release_ready') else None)
+        events_this_step = [released] if released is not None else []
         if events_this_step:
             event = events_this_step[0]
+            if bridge is not None and hasattr(bridge, 'record_event_release'):
+                bridge.record_event_release(event)
             action_code = EVENT_ACTION_MAP[event["action"]]
             x = float(event.get("x", 0))
             y = float(event.get("y", 0))

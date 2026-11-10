@@ -183,6 +183,10 @@ def wildfire_alg(cfg: Config):
                  "position": [float(v) for v in observations[aid][-5:-3].tolist()]}
                 for aid in probe_ids]})
         game_data = parse_game_data(state, cfg)
+        if os.getenv('CREW_PRINT_FIRE_STATE') == '1':
+            print(f"[STATE] t={t} fire_active={game_data.get('fire_active')} "
+                  f"trees_burned={game_data['rewards'][1]} "
+                  f"initial_civilians_rescued={game_data['rewards'][5]}")
         removelist = []
         past_score = global_data["score"]
         global_data.update({
@@ -220,7 +224,9 @@ def wildfire_alg(cfg: Config):
 
         # Scheduled event injection
         scheduled_event_action = None
-        events_this_step = [e for e in scheduled_events if e["timestep"] == t]
+        from crew_algorithms.wildfire_alg.core.scheduled_event_release import event_for_step
+        released = event_for_step(scheduled_events, t, global_data.get('submitted_events', []))
+        events_this_step = [released] if released is not None else []
         if events_this_step:
             event = events_this_step[0]
             action_code = EVENT_ACTION_MAP[event["action"]]
@@ -240,6 +246,8 @@ def wildfire_alg(cfg: Config):
         state["agents"]["action"] = action_tensor
         newstate = env.step(state)
         state["agents"]["observation"] = newstate["next"]["agents"]["observation"]
+        if events_this_step:
+            global_data.setdefault('submitted_events', []).append(dict(events_this_step[0]))
 
 
     if travel_probe_path:

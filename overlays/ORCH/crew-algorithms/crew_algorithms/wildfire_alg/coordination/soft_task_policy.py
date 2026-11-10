@@ -58,7 +58,7 @@ class SoftTaskPolicy:
             response = self.client.chat.completions.create(
                 model=self.model, messages=messages, temperature=0,
                 response_format={"type": "json_object"}, max_tokens=4096,
-                **({"extra_body": {"thinking": {"type": "disabled"}}} if self.model.startswith(("deepseek-flash", "deepseek-v4-pro")) else {}))
+                **({"extra_body": {"thinking": {"type": "disabled"}}} if self.model.startswith(("deepseek-flash", "deepseek-v4-flash", "deepseek-v4-pro")) else {}))
             from ..core.token_guard import record_api_usage
             record_api_usage(response)
             content, usage = response.choices[0].message.content, response.usage

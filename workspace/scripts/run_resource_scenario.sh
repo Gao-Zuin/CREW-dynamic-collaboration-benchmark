@@ -3,7 +3,7 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SCENARIO_FAMILY="${SCENARIO_FAMILY:-scenarios}"
-case "$SCENARIO_FAMILY" in scenarios|fire_near_civilians) ;; *) echo "SCENARIO_FAMILY must be scenarios or fire_near_civilians" >&2; exit 2;; esac
+case "$SCENARIO_FAMILY" in scenarios|fire_near_civilians|commitment_event) ;; *) echo "SCENARIO_FAMILY must be scenarios, fire_near_civilians, or commitment_event" >&2; exit 2;; esac
 LEVEL="${SCENARIO:?set SCENARIO to a name from the selected tasks.json}"
 ARM="${ARM:?set ARM=fixed or adaptive}"
 case "$ARM" in

@@ -6,7 +6,7 @@ from pydantic import BaseModel
 class Action(BaseModel):
     """
     Represents an action that can be taken by an agent in the environment.
-    
+
     Attributes:
         type (int): The type of action to be performed
         param_1 (int): First parameter for the action (typically x-coordinate)
@@ -570,8 +570,14 @@ def write_task_outcome(global_data, cfg, path):
     import json
     from pathlib import Path
     submitted = global_data.get("submitted_events", [])
+    def submitted_identity(event):
+        if event.get('event_id'):
+            return ('id', event['event_id'])
+        return ('fixed', event.get('configured_timestep', event['timestep']),
+                event['action'], event.get('x'), event.get('y'))
+    submitted_keys = {submitted_identity(event) for event in submitted}
     remaining = [dict(e) for e in (getattr(cfg, "scheduled_events", None) or [])
-                 if dict(e) not in submitted]
+                 if submitted_identity(e) not in submitted_keys]
     outcome = {"success": bool(check_game_done(global_data, cfg, global_data["score"])),
                "validator": "core.alg_utils.check_game_done",
                "accounting_version": "returned_state_and_spawn_target_v1",
@@ -670,4 +676,4 @@ def check_game_done(global_data, cfg, past_score):
     else:
         print("invalid game type")
         return True
-    
+
